@@ -1,0 +1,20 @@
+#library-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .library {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .library-name {
+    width: 30%;
+  }
+  
+  .library-details {
+    width: 70%;
+  }
+
+  

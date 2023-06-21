@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Horarios de Bibliotecas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+        @media screen and (max-width: 600px) {
+            table {
+                width: 100%;
+            }
+            th, td {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button id="prevWeek">Anterior</button>
+    <button id="nextWeek">Siguiente</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre de la Biblioteca</th>
+                <th>Horario habitual</th>
+            </tr>
+        </thead>
+        <tbody id="library-data">
+            <tr>
+                <td><div id="MACH">MACH</div></td>
+                <td><div id="WMACH">Horario habitual: 8:00-21:00</div></td>
+            </tr>
+            <tr>
+                <td><div id="ARQ">ARQ</div></td>
+                <td><div id="WARQ">Horario habitual: 8:00-21:00</div></td>
+            </tr>
+            <tr>
+                <td><div id="CRAI">CRAI</div></td>
+                <td><div id="WCRAI">Horario habitual: 8:00-21:00</div></td>
+            </tr>
+            <tr><td><div id="ING">ING</div></td><td><div id="WING">Horario habitual: 8:00-21:00</div></td></tr>
+            <tr><td><div id="HUM-MA">HUM-MA</div></td><td><div id="WHUM-MA">Horario habitual: 8:00-21:00</div></td></tr>
+        </tbody>
+    </table>
+    <script src="app.js"></script>
+    <script>
+        var jsonFile = "libraryAC.json";
+    </script>
+</body>
+</html>
+
+
