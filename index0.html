@@ -1,13 +1,76 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Horarios de las bibliotecas</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-  <div id="library-container">
-    <!-- Aquí es donde se llenarán los detalles de las bibliotecas con JavaScript -->
-  </div>
-  <script src="app.js"></script>
-</body>
-</html>
+<style>
+  #MACH > div,
+  #WMACH > div {
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .weekContainer {
+    display: flex;
+   flex-direction: row;
+    justify-content: space-between;
+}
+
+.dayContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+}
+
+  </style>
+  
+  <table>
+  <tr>
+    <td>
+        <div id="MACH">
+            <div id="MACH-div1">Biblioteca Rector Machado y Núñez</div>
+            <div id="MACH-div2">Cerrada</div>
+            <div id="MACH-div3"></div>
+        </div>
+    </td>
+    <td>
+        <div id="WMACH">
+            <div id="eligeSemana">Semana 25, del 19/06 al 25/06</div>
+            <div id="semana" class="weekContainer">
+                <div id="dia0" class="dayContainer">
+                    <div id="dia0-nombre">lun</div>
+                    <div id="dia0-apertura">8:00</div>
+                    <div id="dia0-cierre">21:00</div>
+                </div>
+                <div id="dia1" class="dayContainer">
+                    <div id="dia1-nombre">mar</div>
+                    <div id="dia1-apertura">8:00</div>
+                    <div id="dia1-cierre">21:00</div>
+                </div>
+                <div id="dia2" class="dayContainer">
+                    <div id="dia2-nombre">mié</div>
+                    <div id="dia2-apertura">8:00</div>
+                    <div id="dia2-cierre">21:00</div>
+                </div>
+                <div id="dia3" class="dayContainer">
+                    <div id="dia3-nombre">jue</div>
+                    <div id="dia3-apertura">8:00</div>
+                    <div id="dia3-cierre">21:00</div>
+                </div>
+                <div id="dia4" class="dayContainer">
+                    <div id="dia4-nombre">vie</div>
+                    <div id="dia4-apertura">8:00</div>
+                    <div id="dia4-cierre">21:00</div>
+                </div>
+                <div id="dia5" class="dayContainer">
+                    <div id="dia5-nombre">sab</div>
+                    <div id="dia5-apertura">8:00</div>
+                    <div id="dia5-cierre">21:00</div>
+                </div>
+                <div id="dia6" class="dayContainer">
+                    <div id="dia6-nombre">dom</div>
+                    <div id="dia6-apertura">8:00</div>
+                    <div id="dia6-cierre">21:00</div>
+                </div>
+            </div>
+        </div>
+    </td>
+</tr>
+  </table>
