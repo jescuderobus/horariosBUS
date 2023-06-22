@@ -20,6 +20,7 @@ window.onload = function() {
         // inicialmente, muestra la semana actual
         showWeek(data, 0);
         
+        
         // establece los botones para navegar entre las semanas
         document.getElementById('prevWeek').addEventListener('click', function() {
           showWeek(data, -1);
@@ -27,6 +28,29 @@ window.onload = function() {
         document.getElementById('nextWeek').addEventListener('click', function() {
           showWeek(data, 1);
         });
+        
+
+        // Obtiene todos los elementos cuyo id contiene 'miPatron'
+        var elementsPW = document.querySelectorAll('[id*=-prevWeek]');
+        // Añade el event listener a cada uno
+        for (let i = 0; i < elementsPW.length; i++) {
+            elementsPW[i].addEventListener('click', function() {
+              //console.log('Elemento clickeado: ', elementsPW[i].id);
+              showWeek(data, -1);
+            });
+        }
+
+        // Obtiene todos los elementos cuyo id contiene 'miPatron'
+        var elementsNW = document.querySelectorAll('[id*=-nextWeek]');
+        // Añade el event listener a cada uno
+        for (let i = 0; i < elementsNW.length; i++) {
+            elementsNW[i].addEventListener('click', function() {
+              //console.log('Elemento clickeado: ', elementsNW[i].id);
+              showWeek(data, 1);
+            });
+        }
+
+
       })
       .catch(error => console.error('Error:', error));
 };
@@ -49,31 +73,109 @@ function showWeek(data, weekOffset) {
   // Recorre cada biblioteca en los datos
   for (var library in data) {
     // Genera el horario semanal
-    var schedule = "Semana " + weekNumber + ", del " + formatDate(monday) + " al " + formatDate(sunday) + ":\n";
-    for (var i = 0; i < 7; i++) {
+    var schedule = "Semana " + weekNumber + ", del " + formatDate(monday) + " al " + formatDate(sunday) + "";
+    for (var i = 1; i <= 7; i++) {
       var date = new Date(monday);
       date.setDate(date.getDate() + i);
       var dateString = dateToYYMMDD(date);
 
       // Busca el horario para esta fecha, si existe
-      var daySchedule = "8:00 - 21:00"; // horario predeterminado
+      var dayScheduleOpen = "8:00"; // horario Apertura predeterminado
+      var dayScheduleClose = "21:00"; // horario Cierre predeterminado
+      var dayScheduleSeparador = "-"; // Separador predeterminado
       if (data[library] && data[library][dateString]) {
         if (data[library][dateString]["a"] == "0:00" && data[library][dateString]["c"] == "0:00") {
-          daySchedule = "Cerrado";
+          dayScheduleOpen = "-";
+          dayScheduleSeparador = "Cerrado";
+          dayScheduleClose = "-";
         } else {
-          daySchedule = data[library][dateString]["a"] + " - " + data[library][dateString]["c"];
+          dayScheduleOpen = data[library][dateString]["a"]; 
+          dayScheduleClose = data[library][dateString]["c"];
+          dayScheduleSeparador = "-";
         }
       }
 
-      // Añade este día al horario
-      schedule += "\n" + date.toLocaleString('es-ES', { weekday: 'short' }) + ": " + daySchedule;
+          // QUITAR TODAY EN AZUL
+    var escribeNombre = document.getElementById(library+'-dia'+(i+1)+'-nombre');
+    var escribeAbrimos = document.getElementById(library+'-dia'+(i+1)+'-apertura');
+    var escribeSeparador = document.getElementById(library+'-dia'+(i+1)+'-separador');
+    var escribeCerramos = document.getElementById(library+'-dia'+(i+1)+'-cierre');
+
+    // Primero, elimina las clases "current-day" y "closed-day" si ya existen
+    if (escribeNombre) {
+      escribeNombre.classList.remove('current-day', 'closed-day');
+    }
+    if (escribeAbrimos) {
+      escribeAbrimos.classList.remove('current-day', 'closed-day');
+    }
+    if (escribeSeparador) {
+      escribeSeparador.classList.remove('current-day', 'closed-day');
+    }
+    if (escribeCerramos) {
+      escribeCerramos.classList.remove('current-day', 'closed-day');
     }
 
-    // Actualiza el div con este horario
-    var div = document.getElementById('W' + library);
-    if (div) {
-      div.innerText = schedule;
+      // JEI - no sé porque he puesto i+1, sospecho que porque el primer dia de la semana es domingo
+
+      
+      if (escribeAbrimos) {
+        escribeAbrimos.innerText = dayScheduleOpen;
+      }
+
+      
+      if (escribeSeparador) {
+        escribeSeparador.innerText = dayScheduleSeparador;
+      }
+
+      
+      if (escribeCerramos) {
+        escribeCerramos.innerText = dayScheduleClose;
+      }
+
+      
+    // Comprueba si el día que se está procesando es el día actual
+    var today = new Date();
+    if (date.getDate() === today.getDate() && date.getMonth() === today.getMonth() && date.getFullYear() === today.getFullYear()) {
+      // Si es así, añade la clase "current-day" a los elementos correspondientes
+      if (escribeNombre) {
+        escribeNombre.classList.add('current-day');
+      }
+      if (escribeAbrimos) {
+        escribeAbrimos.classList.add('current-day');
+      }
+      if (escribeSeparador) {
+        escribeSeparador.classList.add('current-day');
+      }
+      if (escribeCerramos) {
+        escribeCerramos.classList.add('current-day');
+      }
     }
+
+    // Comprueba si la biblioteca está cerrada en este día
+    if (dayScheduleSeparador === "Cerrado") {
+      // Si es así, añade la clase "closed-day" a los elementos correspondientes
+      if (escribeNombre) {
+        escribeNombre.classList.add('closed-day');
+      }
+      if (escribeAbrimos) {
+        escribeAbrimos.classList.add('closed-day');
+      }
+      if (escribeSeparador) {
+        escribeSeparador.classList.add('closed-day');
+      }
+      if (escribeCerramos) {
+        escribeCerramos.classList.add('closed-day');
+      }
+    }
+
+    } // FIN DEL FOR
+
+    var muestraSemana = document.getElementById(library+'-muestraSemana');
+    if (muestraSemana) {
+      muestraSemana.innerText = schedule;
+    }
+
+
   }
 }
 

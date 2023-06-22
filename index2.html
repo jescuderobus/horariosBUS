@@ -5,12 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horarios de las Bibliotecas de la BUS</title>
-    <link rel="stylesheet" href="styles4.css">
+    <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
-
-    <button id="prevWeek">anterior</button>
-    <button id="nextWeek">siguiente</button>
 
 <!-- Biblioteca Rector Machado y Núñez-->
 <div id="MACH" class="horariobib impar">
@@ -20,9 +17,9 @@
         </div>
 
         <div class="div2"> 
-            <div class="anterior"> <button id="MACH-prevWeek">anterior</button></div>
+            <div class="anterior"> <button id="prevWeek">anterior</button></div>
             <div id="MACH-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
-            <div class="siguiente"><button id="MACH-nextWeek">siguiente</button></div>
+            <div class="siguiente"><button id="nextWeek">siguiente</button></div>
        </div>
 
        <div  class="semana">
@@ -79,9 +76,9 @@
     </div>
 
     <div class="div2"> 
-        <div class="anterior"> <button id="ARQ-prevWeek">anterior</button></div>
+        <div class="anterior"> <button id="prevWeek">anterior</button></div>
         <div id="ARQ-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
-        <div class="siguiente"><button id="ARQ-nextWeek">siguiente</button></div>
+        <div class="siguiente"><button id="nextWeek">siguiente</button></div>
    </div>
 
    <div  class="semana">
@@ -141,9 +138,9 @@
     </div>
 
     <div class="div2"> 
-        <div class="anterior"> <button id="CRAI-prevWeek">anterior</button></div>
+        <div class="anterior"> <button id="prevWeek">anterior</button></div>
         <div id="CRAI-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
-        <div class="siguiente"><button id="CRAI-nextWeek">siguiente</button></div>
+        <div class="siguiente"><button id="nextWeek">siguiente</button></div>
    </div>
 
    <div class="semana">
@@ -191,126 +188,8 @@
     </div>
 </div>
 </div> 
-
-<!-- Biblioteca de Ingenieros-->
-<div id="ING" class="horariobib par">
-    <div class="div1">     
-        <div class="biblioteca"> Biblioteca de Ingenieros </div>
-        <div id="ING-estadoBiblioteca" class="estadoBiblioteca">---</div>
-    </div>
-
-    <div class="div2"> 
-        <div class="anterior"> <button id="ING-prevWeek">anterior</button></div>
-        <div id="ING-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
-        <div class="siguiente"><button id="ING-nextWeek">siguiente</button></div>
-   </div>
-
-   <div  class="semana">
-    <div class="dayContainer lunes"> 
-        <div id="ING-dia1-nombre">lun</div>
-        <div id="ING-dia1-apertura">8:00</div>
-        <div id="ING-dia1-separador">-</div>
-        <div id="ING-dia1-cierre">21:00</div>
-    </div>
-    <div class="dayContainer martes"> 
-        <div id="ING-dia2-nombre">mar</div>
-        <div id="ING-dia2-apertura">8:00</div>
-        <div id="ING-dia2-separador">-</div>
-        <div id="ING-dia2-cierre">21:00</div>
-    </div>
-    <div class="dayContainer miercoles"> 
-        <div id="ING-dia3-nombre">mié</div>
-        <div id="ING-dia3-apertura">8:00</div>
-        <div id="ING-dia3-separador">-</div>
-        <div id="ING-dia3-cierre">21:00</div>
-    </div>
-    <div class="dayContainer jueves"> 
-        <div id="ING-dia4-nombre">jue</div>
-        <div id="ING-dia4-apertura">8:00</div>
-        <div id="ING-dia4-separador">-</div>
-        <div id="ING-dia4-cierre">21:00</div>
-    </div>
-    <div class="dayContainer viernes"> 
-        <div id="ING-dia5-nombre">vie</div>
-        <div id="ING-dia5-apertura">8:00</div>
-        <div id="ING-dia5-separador">-</div>
-        <div id="ING-dia5-cierre">21:00</div>
-    </div>
-    <div class="dayContainer sabado"> 
-        <div id="ING-dia6-nombre">sab</div>
-        <div id="ING-dia6-apertura">-</div>
-        <div id="ING-dia6-separador">Cerrado</div>
-        <div id="ING-dia6-cierre">-</div>
-    </div>
-    <div class="dayContainer domingo"> 
-        <div id="ING-dia7-nombre">dom</div>
-        <div id="ING-dia7-apertura">-</div>
-        <div id="ING-dia7-separador">Cerrado</div>
-        <div id="ING-dia7-cierre">-</div>
-    </div>
-</div>
-</div> 
-
-<!-- Biblioteca de Matemáticas-->
-<div id="MAT" class="horariobib impar">
-    <div class="div1">     
-        <div class="biblioteca"> Biblioteca de Matemáticas </div>
-        <div id="MAT-estadoBiblioteca" class="estadoBiblioteca">---</div>
-    </div>
-
-    <div class="div2"> 
-        <div class="anterior"> <button id="MAT-prevWeek">anterior</button></div>
-        <div id="MAT-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
-        <div class="siguiente"><button id="MAT-nextWeek">siguiente</button></div>
-   </div>
-
-   <div  class="semana">
-    <div class="dayContainer lunes"> 
-        <div id="MAT-dia1-nombre">lun</div>
-        <div id="MAT-dia1-apertura">8:00</div>
-        <div id="MAT-dia1-separador">-</div>
-        <div id="MAT-dia1-cierre">21:00</div>
-    </div>
-    <div class="dayContainer martes"> 
-        <div id="MAT-dia2-nombre">mar</div>
-        <div id="MAT-dia2-apertura">8:00</div>
-        <div id="MAT-dia2-separador">-</div>
-        <div id="MAT-dia2-cierre">21:00</div>
-    </div>
-    <div class="dayContainer miercoles"> 
-        <div id="MAT-dia3-nombre">mié</div>
-        <div id="MAT-dia3-apertura">8:00</div>
-        <div id="MAT-dia3-separador">-</div>
-        <div id="MAT-dia3-cierre">21:00</div>
-    </div>
-    <div class="dayContainer jueves"> 
-        <div id="MAT-dia4-nombre">jue</div>
-        <div id="MAT-dia4-apertura">8:00</div>
-        <div id="MAT-dia4-separador">-</div>
-        <div id="MAT-dia4-cierre">21:00</div>
-    </div>
-    <div class="dayContainer viernes"> 
-        <div id="MAT-dia5-nombre">vie</div>
-        <div id="MAT-dia5-apertura">8:00</div>
-        <div id="MAT-dia5-separador">-</div>
-        <div id="MAT-dia5-cierre">21:00</div>
-    </div>
-    <div class="dayContainer sabado"> 
-        <div id="MAT-dia6-nombre">sab</div>
-        <div id="MAT-dia6-apertura">-</div>
-        <div id="MAT-dia6-separador">Cerrado</div>
-        <div id="MAT-dia6-cierre">-</div>
-    </div>
-    <div class="dayContainer domingo"> 
-        <div id="MAT-dia7-nombre">dom</div>
-        <div id="MAT-dia7-apertura">-</div>
-        <div id="MAT-dia7-separador">Cerrado</div>
-        <div id="MAT-dia7-cierre">-</div>
-    </div>
-</div>
-</div> 
     
-<script src="app4.js"></script>
+<script src="app2.js"></script>
 <script>
     var jsonFile = "libraryAC.json";
 </script>
