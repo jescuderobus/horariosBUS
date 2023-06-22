@@ -74,7 +74,7 @@ function showWeek(data, weekOffset) {
   for (var library in data) {
     // Genera el horario semanal
     var schedule = "Semana " + weekNumber + ", del " + formatDate(monday) + " al " + formatDate(sunday) + "";
-    for (var i = 1; i <= 7; i++) {
+    for (var i = 0; i < 7; i++) {
       var date = new Date(monday);
       date.setDate(date.getDate() + i);
       var dateString = dateToYYMMDD(date);
@@ -96,10 +96,10 @@ function showWeek(data, weekOffset) {
       }
 
           // QUITAR TODAY EN AZUL
-    var escribeNombre = document.getElementById(library+'-dia'+(i+1)+'-nombre');
-    var escribeAbrimos = document.getElementById(library+'-dia'+(i+1)+'-apertura');
-    var escribeSeparador = document.getElementById(library+'-dia'+(i+1)+'-separador');
-    var escribeCerramos = document.getElementById(library+'-dia'+(i+1)+'-cierre');
+    var escribeNombre = document.getElementById(library+'-dia'+i+'-nombre');
+    var escribeAbrimos = document.getElementById(library+'-dia'+i+'-apertura');
+    var escribeSeparador = document.getElementById(library+'-dia'+i+'-separador');
+    var escribeCerramos = document.getElementById(library+'-dia'+i+'-cierre');
 
     // Primero, elimina las clases "current-day" y "closed-day" si ya existen
     if (escribeNombre) {
