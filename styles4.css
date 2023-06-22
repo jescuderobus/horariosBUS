@@ -83,25 +83,60 @@ font-size: 1.5em;
     justify-content: space-between;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 950px) {
     .horariobib {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        font-size: 0.8em;
+        font-size: 0.95em;
     }
-    
-    .div1 { 
-        grid-area: 1 / 1 / 2 / 2;
-    }
-    .div2 { 
-        grid-area: 2 / 1 / 3 / 2;
-    }
-    .semana { 
-        grid-area: 3 / 1 / 4 / 2; 
-    }
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 2 / 1 / 3 / 2; }
+    .semana { grid-area: 3 / 1 / 4 / 2;  }
+}
 
-    
+@media (max-width: 850px) {
+    .horariobib {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        font-size: 0.85em;
     }
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 2 / 1 / 3 / 2; }
+    .semana { grid-area: 3 / 1 / 4 / 2;  }
+}
+
+@media (max-width: 750px) {
+    .horariobib {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        font-size: 0.75em;
+    }
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 2 / 1 / 3 / 2; }
+    .semana { grid-area: 3 / 1 / 4 / 2;  }
+}
+
+@media (max-width: 650px) {
+    .horariobib {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        font-size: 0.65em;
+    }
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 2 / 1 / 3 / 2; }
+    .semana { grid-area: 3 / 1 / 4 / 2;  }
+}
+
+@media (max-width: 550px) {
+    .horariobib {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        font-size: 0.55em;
+    }
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 2 / 1 / 3 / 2; }
+    .semana { grid-area: 3 / 1 / 4 / 2;  }
+}
 
     .current-day {
         color: blue;
