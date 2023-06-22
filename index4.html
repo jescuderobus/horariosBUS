@@ -1,86 +1,441 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Horarios de Bibliotecas</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
+      body {
+        font-family: Arial, sans-serif;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #4caf50;
+        color: white;
+      }
+
+      .today {
+        color: blue;
+      }
+
+      @media screen and (max-width: 600px) {
         table {
-            width: 100%;
-            border-collapse: collapse;
+          width: 100%;
         }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
+        th,
+        td {
+          display: block;
+          width: 100%;
+          text-align: center;
         }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        th {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            text-align: left;
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        .today {
-            color: blue;
-        }
-
-        @media screen and (max-width: 600px) {
-            table {
-                width: 100%;
-            }
-            th, td {
-                display: block;
-                width: 100%;
-                text-align: center;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <button id="prevWeek">Anterior</button>
     <button id="nextWeek">Siguiente</button>
 
     <table>
-        <thead>
-            <tr>
-                <th>Nombre de la Biblioteca</th>
-                <th>Horario habitual</th>
-            </tr>
-        </thead>
-        <tbody id="library-data">
-            <tr>
-                <td><div id="MACH">MACH</div></td>
-                <td><div id="WMACH">Horario habitual: 8:00-21:00</div></td>
-            </tr>
-            <tr>
-                <td><div id="ARQ">ARQ</div></td>
-                <td><div id="WARQ">Horario habitual: 8:00-21:00</div></td>
-            </tr>
-            <tr>
-                <td><div id="CRAI">CRAI</div></td>
-                <td><div id="WCRAI">Horario habitual: 8:00-21:00</div></td>
-            </tr>
-            <tr>
-                <td><div id="ING">ING</div></td>
-                <td><div id="WING">Horario habitual: 8:00-21:00</div></td>
-            </tr>
-            <tr>
-                <td><div id="HUM-MA">HUM-MA</div></td>
-                <td><div id="WHUM-MA">Horario habitual: 8:00-21:00</div></td>
-            </tr>
-        </tbody>
+      <thead>
+        <tr>
+          <th>Nombre de la Biblioteca</th>
+          <th>Horario habitual</th>
+        </tr>
+      </thead>
+      <tbody id="library-data">
+        <tr>
+          <td><div id="MACH">MACH</div></td>
+          <td><div id="WMACH">Horario habitual: 8:00-21:00</div></td>
+        </tr>
+        <tr>
+          <td><div id="ARQ">ARQ</div></td>
+          <td><div id="WARQ">Horario habitual: 8:00-21:00</div></td>
+        </tr>
+        <tr>
+          <td><div id="CRAI">CRAI</div></td>
+          <td><div id="WCRAI">Horario habitual: 8:00-21:00</div></td>
+        </tr>
+        <tr>
+          <td><div id="ING">ING</div></td>
+          <td><div id="WING">Horario habitual: 8:00-21:00</div></td>
+        </tr>
+        <tr>
+          <td><div id="HUM-MA">HUM-MA</div></td>
+          <td><div id="WHUM-MA">Horario habitual: 8:00-21:00</div></td>
+        </tr>
+      </tbody>
     </table>
     <script src="app4.js"></script>
     <script>
-        var jsonFile = "libraryAC.json";
+      var jsonFile = "libraryAC.json";
     </script>
-</body>
+  </body>
 </html>
 
 
+
+
+
+
+
+
+
+
+<td style="width: 36.8351%; height: 55px">
+  <a id="scb"></a><a id="SCB"></a
+  ><a href="/servicio-central-de-bibliotecas"
+    >Servicio Central de Bibliotecas</a
+  >
+  <p></p>
+  <p>Horario habitual: 9:00-15:00</p>
+</td>
+<td style="width: 64.9262%; height: 55px" colspan="2">
+  <script
+    charset="UTF-8"
+    src="https://webapi.affluences.com/js/timetable_api_latest.min.js"
+  ></script>
+  <p></p>
+  <div class="affluences-timetable sm" data-token="58dDQAnjG73wnB" lang="es">
+    <div class="affluences-timetable-container">
+      <div class="affluences-timetable-navbar">
+        <div class="affluences-timetable-navbar-spinner">
+          <div
+            class="spinner"
+            style="
+              position: absolute;
+              width: 0px;
+              z-index: 2000000000;
+              left: 50%;
+              top: 50%;
+            "
+            role="progressbar"
+          >
+            <div
+              style="
+                position: absolute;
+                top: -1px;
+                opacity: 0.25;
+                animation: 1s linear 0s infinite normal none running
+                  opacity-100-25-0-11;
+              "
+            >
+              <div
+                style="
+                  position: absolute;
+                  width: 5px;
+                  height: 2px;
+                  background: rgb(79, 172, 201);
+                  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px;
+                  transform-origin: left center 0px;
+                  transform: rotate(0deg) translate(3px);
+                  border-radius: 1px;
+                "
+              ></div>
+            </div>
+            <div
+              style="
+                position: absolute;
+                top: -1px;
+                opacity: 0.25;
+                animation: 1s linear 0s infinite normal none running
+                  opacity-100-25-1-11;
+              "
+            >
+              <div
+                style="
+                  position: absolute;
+                  width: 5px;
+                  height: 2px;
+                  background: rgb(79, 172, 201);
+                  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px;
+                  transform-origin: left center 0px;
+                  transform: rotate(32deg) translate(3px);
+                  border-radius: 1px;
+                "
+              ></div>
+            </div>
+            <div
+              style="
+                position: absolute;
+                top: -1px;
+                opacity: 0.25;
+                animation: 1s linear 0s infinite normal none running
+                  opacity-100-25-2-11;
+              "
+            >
+              <div
+                style="
+                  position: absolute;
+                  width: 5px;
+                  height: 2px;
+                  background: rgb(79, 172, 201);
+                  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px;
+                  transform-origin: left center 0px;
+                  transform: rotate(65deg) translate(3px);
+                  border-radius: 1px;
+                "
+              ></div>
+            </div>
+            <div
+              style="
+                position: absolute;
+                top: -1px;
+                opacity: 0.25;
+                animation: 1s linear 0s infinite normal none running
+                  opacity-100-25-3-11;
+              "
+            >
+              <div
+                style="
+                  position: absolute;
+                  width: 5px;
+                  height: 2px;
+                  background: rgb(79, 172, 201);
+                  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px;
+                  transform-origin: left center 0px;
+                  transform: rotate(98deg) translate(3px);
+                  border-radius: 1px;
+                "
+              ></div>
+            </div>
+            <div
+              style="
+                position: absolute;
+                top: -1px;
+                opacity: 0.25;
+                animation: 1s linear 0s infinite normal none running
+                  opacity-100-25-4-11;
+              "
+            >
+              <div
+                style="
+                  position: absolute;
+                  width: 5px;
+                  height: 2px;
+                  background: rgb(79, 172, 201);
+                  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px;
+                  transform-origin: left center 0px;
+                  transform: rotate(130deg) translate(3px);
+                  border-radius: 1px;
+                "
+              ></div>
+            </div>
+            <div
+              style="
+                position: absolute;
+                top: -1px;
+                opacity: 0.25;
+                animation: 1s linear 0s infinite normal none running
+                  opacity-100-25-5-11;
+              "
+            >
+              <div
+                style="
+                  position: absolute;
+                  width: 5px;
+                  height: 2px;
+                  background: rgb(79, 172, 201);
+                  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px;
+                  transform-origin: left center 0px;
+                  transform: rotate(163deg) translate(3px);
+                  border-radius: 1px;
+                "
+              ></div>
+            </div>
+            <div
+              style="
+                position: absolute;
+                top: -1px;
+                opacity: 0.25;
+                animation: 1s linear 0s infinite normal none running
+                  opacity-100-25-6-11;
+              "
+            >
+              <div
+                style="
+                  position: absolute;
+                  width: 5px;
+                  height: 2px;
+                  background: rgb(79, 172, 201);
+                  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px;
+                  transform-origin: left center 0px;
+                  transform: rotate(196deg) translate(3px);
+                  border-radius: 1px;
+                "
+              ></div>
+            </div>
+            <div
+              style="
+                position: absolute;
+                top: -1px;
+                opacity: 0.25;
+                animation: 1s linear 0s infinite normal none running
+                  opacity-100-25-7-11;
+              "
+            >
+              <div
+                style="
+                  position: absolute;
+                  width: 5px;
+                  height: 2px;
+                  background: rgb(79, 172, 201);
+                  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px;
+                  transform-origin: left center 0px;
+                  transform: rotate(229deg) translate(3px);
+                  border-radius: 1px;
+                "
+              ></div>
+            </div>
+            <div
+              style="
+                position: absolute;
+                top: -1px;
+                opacity: 0.25;
+                animation: 1s linear 0s infinite normal none running
+                  opacity-100-25-8-11;
+              "
+            >
+              <div
+                style="
+                  position: absolute;
+                  width: 5px;
+                  height: 2px;
+                  background: rgb(79, 172, 201);
+                  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px;
+                  transform-origin: left center 0px;
+                  transform: rotate(261deg) translate(3px);
+                  border-radius: 1px;
+                "
+              ></div>
+            </div>
+            <div
+              style="
+                position: absolute;
+                top: -1px;
+                opacity: 0.25;
+                animation: 1s linear 0s infinite normal none running
+                  opacity-100-25-9-11;
+              "
+            >
+              <div
+                style="
+                  position: absolute;
+                  width: 5px;
+                  height: 2px;
+                  background: rgb(79, 172, 201);
+                  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px;
+                  transform-origin: left center 0px;
+                  transform: rotate(294deg) translate(3px);
+                  border-radius: 1px;
+                "
+              ></div>
+            </div>
+            <div
+              style="
+                position: absolute;
+                top: -1px;
+                opacity: 0.25;
+                animation: 1s linear 0s infinite normal none running
+                  opacity-100-25-10-11;
+              "
+            >
+              <div
+                style="
+                  position: absolute;
+                  width: 5px;
+                  height: 2px;
+                  background: rgb(79, 172, 201);
+                  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px;
+                  transform-origin: left center 0px;
+                  transform: rotate(327deg) translate(3px);
+                  border-radius: 1px;
+                "
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="next-week" data-index="0">&gt;</div>
+        <div class="prev-week" data-index="0">&lt;</div>
+        <div class="range">19/06 - 25/06</div>
+      </div>
+      <div class="day">
+        <div class="timetable-title">Lun</div>
+        <div class="timetable-title-long">Lunes</div>
+        <div>
+          <div class="timetable-time-container">
+            09:00
+            <div class="minus-seperator">-</div>
+            14:00
+          </div>
+        </div>
+      </div>
+      <div class="day">
+        <div class="timetable-title">Mart</div>
+        <div class="timetable-title-long">Martes</div>
+        <div>
+          <div class="timetable-time-container">
+            09:00
+            <div class="minus-seperator">-</div>
+            14:00
+          </div>
+        </div>
+      </div>
+      <div class="day">
+        <div class="timetable-title">Miér</div>
+        <div class="timetable-title-long">Miércoles</div>
+        <div>
+          <div class="timetable-time-container">
+            09:00
+            <div class="minus-seperator">-</div>
+            14:00
+          </div>
+        </div>
+      </div>
+      <div class="day current">
+        <div class="timetable-title">Juev</div>
+        <div class="timetable-title-long">Jueves</div>
+        <div>
+          <div class="timetable-time-container">
+            09:00
+            <div class="minus-seperator">-</div>
+            14:00
+          </div>
+        </div>
+      </div>
+      <div class="day">
+        <div class="timetable-title">Vier</div>
+        <div class="timetable-title-long">Viernes</div>
+        <div>
+          <div class="timetable-time-container">
+            09:00
+            <div class="minus-seperator">-</div>
+            14:00
+          </div>
+        </div>
+      </div>
+      <div class="day closed">
+        <div class="timetable-title">Sáb</div>
+        <div class="timetable-title-long">Sábado</div>
+        <div><div class="timetable-time-container">Cerrado</div></div>
+      </div>
+      <div class="day closed">
+        <div class="timetable-title">Dom</div>
+        <div class="timetable-title-long">Domingo</div>
+        <div><div class="timetable-time-container">Cerrado</div></div>
+      </div>
+    </div>
+  </div>
+</td>

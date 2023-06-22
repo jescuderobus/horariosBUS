@@ -12,6 +12,8 @@
         grid-template-rows: repeat(4, 1fr);
         grid-column-gap: 5px;
         grid-row-gap: 5px;
+        border: 1px solid red;
+        margin: 1rem;
         }
 
         .div1 { grid-area: 1 / 1 / 5 / 4; }
@@ -30,6 +32,13 @@
         .sabado { grid-area: 2 / 9 / 5 / 10; }
         .domingo { grid-area: 2 / 10 / 5 / 11; }
 
+        .anterior .siguiente .eligeSemana {
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
+            text-align: center;
+        }
+
         .dayContainer {
         display: flex;
         flex-direction: column;
@@ -37,57 +46,99 @@
         flex-grow: 1;
         text-align: center;
         font-weight: bold;
+        padding:0.5em;
+        font-size: 1.5em;
         }
+
+        .cerrado{
+            color: gray;
+        }
+
+        .biblioteca{
+            font-size: 1em;
+            padding-left: 1em;
+        }
+
+        .siguiente{
+          
+          text-align: justify;
+          
+        }
+        .eligeSemana{
+            
+            text-align: center;
+        }
+        .anterior{
+            
+            text-align: left;
+        }
+        .semana{
+            display: flex;
+        }
+
+        #dia1-nombre{padding:0.5em;}
 
     </style>
 </head>
 <body>
 
-    <div class="horariobib">
-        <div class="div1"> </div>
-        <div class="div2"> </div>
-        <div class="semana"> </div>
-        <div class="biblioteca"> Biblioteca Rector Machado y Núñez </div>
-        <div class="estadoBiblioteca"> Cerrada</div>
-        <div class="eligesemana"> Semana 25, del 19/06 al 25/06</div>
-        <div class="anterior"> anterior</div>
-        <div class="siguiente"> siguiente</div>
+<div class="horariobib">
+        <div class="div1">     
+            <div class="biblioteca"> Biblioteca Rector Machado y Núñez </div>
+            <div class="estadoBiblioteca">Cerrada</div>
+        </div>
+
+        <div class="div2"> 
+            <div class="anterior"> anterior</div>
+            <div class="eligeSemana"> Semana 25, del 19/06 al 25/06</div>
+            <div class="siguiente"> siguiente</div>
+       </div>
+
+       <div class="semana">
         <div class="dayContainer lunes"> 
             <div id="dia1-nombre">lun</div>
             <div id="dia1-apertura">8:00</div>
+            <div id="dia1-separador">-</div>
             <div id="dia1-cierre">21:00</div>
         </div>
-        <div class="martes"> 
+        <div class="dayContainer martes"> 
             <div id="dia2-nombre">mar</div>
             <div id="dia2-apertura">8:00</div>
+            <div id="dia2-separador">-</div>
             <div id="dia2-cierre">21:00</div>
         </div>
-        <div class="miercoles"> 
-            <div id="dia2-nombre">mié</div>
-            <div id="dia2-apertura">8:00</div>
-            <div id="dia2-cierre">21:00</div>
+        <div class="dayContainer miercoles"> 
+            <div id="dia3-nombre">mié</div>
+            <div id="dia3-apertura">8:00</div>
+            <div id="dia3-separador">-</div>
+            <div id="dia3-cierre">21:00</div>
         </div>
-        <div class="jueves"> 
-            <div id="dia2-nombre">jue</div>
-            <div id="dia2-apertura">8:00</div>
-            <div id="dia2-cierre">21:00</div>
+        <div class="dayContainer jueves"> 
+            <div id="dia4-nombre">jue</div>
+            <div id="dia4-apertura">8:00</div>
+            <div id="dia4-separador">-</div>
+            <div id="dia4-cierre">21:00</div>
         </div>
-        <div class="viernes"> 
-            <div id="dia2-nombre">vie</div>
-            <div id="dia2-apertura">8:00</div>
-            <div id="dia2-cierre">21:00</div>
+        <div class="dayContainer viernes"> 
+            <div id="dia5-nombre">vie</div>
+            <div id="dia5-apertura">8:00</div>
+            <div id="dia5-separador">-</div>
+            <div id="dia5-cierre">21:00</div>
         </div>
-        <div class="sabado"> 
-            <div id="dia2-nombre">sab</div>
-            <div id="dia2-apertura">8:00</div>
-            <div id="dia2-cierre">21:00</div>
+        <div class="dayContainer sabado cerrado"> 
+            <div id="dia6-nombre">sab</div>
+            <div id="dia6-apertura">-</div>
+            <div id="dia6-separador">Cerrado</div>
+            <div id="dia6-cierre">-</div>
         </div>
-        <div class="domingo"> 
-            <div id="dia2-nombre">dom</div>
-            <div id="dia2-apertura">8:00</div>
-            <div id="dia2-cierre">21:00</div>
+        <div class="dayContainer domingo cerrado"> 
+            <div id="dia7-nombre">dom</div>
+            <div id="dia7-apertura">-</div>
+            <div id="dia7-separador">Cerrado</div>
+            <div id="dia7-cierre">-</div>
         </div>
-        </div> 
+    </div>
+</div> 
 
     
 </body>
