@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <title>Ejemplo de Modal Bootstrap</title>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Ejemplo de Modal Bootstrap</h1>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/135px-Flag_of_Germany.svg.png" alt="Imagen" class="img-thumbnail" data-toggle="modal" data-target="#modalContenido">
+
+  </div>
+
+
+
+
+  <!-- Modal -->
+
+  <div class="modal fade" id="modalContenido" tabindex="-1" role="dialog" aria-labelledby="modalTitulo" aria-hidden="true">
+
+    <div class="modal-dialog modal-lg">
+
+      <div class="modal-content">
+
+        <div class="modal-header">
+
+          <h5 class="modal-title" id="modalTitulo">Contenido del Modal</h5>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+            <span aria-hidden="true">&times;</span>
+
+          </button>
+
+        </div>
+
+        <div class="modal-body">
+
+          <iframe id="iframeContenido" src="" frameborder="0" style="width: 100%; height: 100%;"></iframe>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <script>
+
+    $(document).ready(function() {
+
+      $('.img-thumbnail').click(function() {
+
+        var link = "https://es.wikipedia.org/wiki/Alemania"; // Reemplaza esto con la URL de la página que deseas cargar
+
+        $('#iframeContenido').attr('src', link);
+
+      });
+
+    });
+
+  </script>
+
+</body>
+
+</html>

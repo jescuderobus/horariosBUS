@@ -1,0 +1,118 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Horarios de las Bibliotecas de la BUS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,300,700,400italic,700italic,900" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<!--Copiar desde Aquí -->
+
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://bib.us.es/horarios/styles.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,300,700,400italic,700italic,900" rel="stylesheet" type="text/css">
+    <link href="index0_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles1.css">
+
+<div style="display:none;">
+    <button id="prevWeek"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+    <button id="nextWeek"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+</div>
+
+<a id="campus"></a>
+
+<ul class="campus">
+<li><a href="#campusIslaCartuja">Campus Isla de la Cartuja</a></li>
+<li><a href="#campusReinaMercedes">Campus Reina Mercedes</a></li>
+<li><a href="#campusRamonCajal">Campus Ramón y Cajal</a></li>
+<li><a href="#campusMacarena">Campus Macarena</a></li>
+<li><a href="#campusRectorado">Campus Rectorado</a></li>
+<li><a href="#campusOtras">Otras Bibliotecas</a></li>
+</ul>
+
+
+
+<!-- Biblioteca Rector Machado y Núñez-->
+
+
+<div id="MACH" class="horariobib par row">
+    <div class="div1 col">     
+        <div class="biblioteca"> Biblioteca Rector Machado y Núñez </div>
+        <div id="MACH-estadoBiblioteca" class="estadoBiblioteca">---</div>
+    </div>
+
+    <div class="col"> <!--Contenedor dias y semanas-->
+    <div class="div2 row col"> 
+        <div class="anterior col ms-0"> <button id="MACH-prevWeek"><i class="fa fa-arrow-left" aria-hidden="true" title="anterior"></i></button></div>
+        <div id="MACH-muestraSemana" class="eligeSemana col text-center"> Semana ??, del ??/?? al ??/??</div>
+        <div class="siguiente col d-flex justify-content-end"><button id="MACH-nextWeek"><i class="fa fa-arrow-right" aria-hidden="true" title="siguiente"></i></button></div>
+   </div>
+
+   <div  class="semana row">
+    <div class="dayContainer lunes col"> 
+        <div id="MACH-dia0-nombre row">lun</div>
+        <div id="MACH-dia0-apertura row">8:00</div>
+        <div id="MACH-dia0-separador row">-</div>
+        <div id="MACH-dia0-cierre row">21:00</div>
+    </div>
+    <div class="dayContainer martes col"> 
+        <div id="MACH-dia1-nombre row">mar</div>
+        <div id="MACH-dia1-apertura row">8:00</div>
+        <div id="MACH-dia1-separador row">-</div>
+        <div id="MACH-dia1-cierre row">21:00</div>
+    </div>
+    <div class="dayContainer miercoles col"> 
+        <div id="MACH-dia2-nombre row">mié</div>
+        <div id="MACH-dia2-apertura row">8:00</div>
+        <div id="MACH-dia2-separador row">-</div>
+        <div id="MACH-dia2-cierre row">21:00</div>
+    </div>
+    <div class="dayContainer jueves col"> 
+        <div id="MACH-dia3-nombre row">jue</div>
+        <div id="MACH-dia3-apertura row">8:00</div>
+        <div id="MACH-dia3-separador row">-</div>
+        <div id="MACH-dia3-cierre row">21:00</div>
+    </div>
+    <div class="dayContainer viernes col"> 
+        <div id="MACH-dia4-nombre row">vie</div>
+        <div id="MACH-dia4-apertura row">8:00</div>
+        <div id="MACH-dia4-separador row">-</div>
+        <div id="MACH-dia4-cierre row">21:00</div>
+    </div>
+    <div class="dayContainer sabado col"> 
+        <div id="MACH-dia5-nombre row">sab</div>
+        <div id="MACH-dia5-apertura row">-</div>
+        <div id="MACH-dia5-separador row">Cerrado</div>
+        <div id="MACH-dia5-cierre row">-</div>
+    </div>
+    <div class="dayContainer domingo col"> 
+        <div id="MACH-dia6-nombre row">dom</div>
+        <div id="MACH-dia6-apertura row">-</div>
+        <div id="MACH-dia6-separador row">Cerrado</div>
+        <div id="MACH-dia6-cierre row">-</div>
+    </div>
+</div>
+</div> <!--fin Contenedor dias y semanas-->
+</div>
+
+    
+<script src="https://bib.us.es/horarios/app.js"></script>
+<script>
+    // var jsonFile = "https://bib.us.es/horarios/libraryAC_230630_1917.json";
+    var jsonFile = "libraryAC_230630_1917.json";
+</script>
+
+
+<!-- Hasta Aqui -->
+
+</body>
+</html>

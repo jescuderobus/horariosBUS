@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horarios de las Bibliotecas de la BUS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles7.css">
+</head>
+<body>
+    
+<h1>Horario de las Bibliotecas de la Universidad de Sevilla</h1>
+
+<ul class="campus">
+<li><a href="#campusIslaCartuja">Campus Isla de la Cartuja</a></li>
+<li><a href="#campusReinaMercedes">Campus Reina Mercedes</a></li>
+<li><a href="#campusRamonCajal">Campus Ramón y Cajal</a></li>
+<li><a href="#campusMacarena">Campus Macarena</a></li>
+<li><a href="#campusRectorado">Campus Reina Rectorado</a></li>
+<li><a href="#campusOtras">Otras Bibliotecas</a></li>
+</ul>
+
+<div style="display:none;">
+    <button id="prevWeek"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+    <button id="nextWeek"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+</div>
+
+<!-- Biblioteca Rector Machado y Núñez-->
+<div id="MACH" class="horariobib par">
+    <div class="div1">     
+        <div class="biblioteca"> Biblioteca Rector Machado y Núñez </div>
+        <div id="MACH-estadoBiblioteca" class="estadoBiblioteca">---</div>
+    </div>
+
+    <div class="div2"> 
+        <div class="anterior"> <button id="MACH-prevWeek"><i class="fa fa-arrow-left" aria-hidden="true"></i></button></div>
+        <div id="MACH-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
+        <div class="siguiente"><button id="MACH-nextWeek"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+   </div>
+
+   <div  class="semana">
+    <div class="dayContainer lunes"> 
+        <div id="MACH-dia0-nombre">lun</div>
+        <div id="MACH-dia0-apertura">8:00</div>
+        <div id="MACH-dia0-separador">-</div>
+        <div id="MACH-dia0-cierre">21:00</div>
+    </div>
+    <div class="dayContainer martes"> 
+        <div id="MACH-dia1-nombre">mar</div>
+        <div id="MACH-dia1-apertura">8:00</div>
+        <div id="MACH-dia1-separador">-</div>
+        <div id="MACH-dia1-cierre">21:00</div>
+    </div>
+    <div class="dayContainer miercoles"> 
+        <div id="MACH-dia2-nombre">mié</div>
+        <div id="MACH-dia2-apertura">8:00</div>
+        <div id="MACH-dia2-separador">-</div>
+        <div id="MACH-dia2-cierre">21:00</div>
+    </div>
+    <div class="dayContainer jueves"> 
+        <div id="MACH-dia3-nombre">jue</div>
+        <div id="MACH-dia3-apertura">8:00</div>
+        <div id="MACH-dia3-separador">-</div>
+        <div id="MACH-dia3-cierre">21:00</div>
+    </div>
+    <div class="dayContainer viernes"> 
+        <div id="MACH-dia4-nombre">vie</div>
+        <div id="MACH-dia4-apertura">8:00</div>
+        <div id="MACH-dia4-separador">-</div>
+        <div id="MACH-dia4-cierre">21:00</div>
+    </div>
+    <div class="dayContainer sabado"> 
+        <div id="MACH-dia5-nombre">sab</div>
+        <div id="MACH-dia5-apertura">-</div>
+        <div id="MACH-dia5-separador">Cerrado</div>
+        <div id="MACH-dia5-cierre">-</div>
+    </div>
+    <div class="dayContainer domingo"> 
+        <div id="MACH-dia6-nombre">dom</div>
+        <div id="MACH-dia6-apertura">-</div>
+        <div id="MACH-dia6-separador">Cerrado</div>
+        <div id="MACH-dia6-cierre">-</div>
+    </div>
+</div>
+</div> 
+
+<!-- Fondo Antiguo y Archivo Histórico-->
+<div id="FAAH" class="horariobib impar">
+    <div class="div1">     
+        <div class="biblioteca"> Fondo Antiguo y Archivo Histórico </div>
+        <div style="text-align: center;font-size: 1.2em;">(Sala de Investigadores)</div>
+        <div id="FAAH-estadoBiblioteca" class="estadoBiblioteca">---</div>
+    </div>
+    
+    <div class="div2"> 
+        <div class="anterior"> <button id="FAAH-prevWeek"><i class="fa fa-arrow-left" aria-hidden="true"></i></button></div>
+        <div id="FAAH-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
+        <div class="siguiente"><button id="FAAH-nextWeek"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+    </div>
+    
+    <div  class="semana">
+    <div class="dayContainer lunes"> 
+        <div id="FAAH-dia0-nombre">lun</div>
+        <div id="FAAH-dia0-apertura">8:00</div>
+        <div id="FAAH-dia0-separador">-</div>
+        <div id="FAAH-dia0-cierre">21:00</div>
+    </div>
+    <div class="dayContainer martes"> 
+        <div id="FAAH-dia1-nombre">mar</div>
+        <div id="FAAH-dia1-apertura">8:00</div>
+        <div id="FAAH-dia1-separador">-</div>
+        <div id="FAAH-dia1-cierre">21:00</div>
+    </div>
+    <div class="dayContainer miercoles"> 
+        <div id="FAAH-dia2-nombre">mié</div>
+        <div id="FAAH-dia2-apertura">8:00</div>
+        <div id="FAAH-dia2-separador">-</div>
+        <div id="FAAH-dia2-cierre">21:00</div>
+    </div>
+    <div class="dayContainer jueves"> 
+        <div id="FAAH-dia3-nombre">jue</div>
+        <div id="FAAH-dia3-apertura">8:00</div>
+        <div id="FAAH-dia3-separador">-</div>
+        <div id="FAAH-dia3-cierre">21:00</div>
+    </div>
+    <div class="dayContainer viernes"> 
+        <div id="FAAH-dia4-nombre">vie</div>
+        <div id="FAAH-dia4-apertura">8:00</div>
+        <div id="FAAH-dia4-separador">-</div>
+        <div id="FAAH-dia4-cierre">21:00</div>
+    </div>
+    <div class="dayContainer sabado"> 
+        <div id="FAAH-dia5-nombre">sab</div>
+        <div id="FAAH-dia5-apertura">-</div>
+        <div id="FAAH-dia5-separador">Cerrado</div>
+        <div id="FAAH-dia5-cierre">-</div>
+    </div>
+    <div class="dayContainer domingo"> 
+        <div id="FAAH-dia6-nombre">dom</div>
+        <div id="FAAH-dia6-apertura">-</div>
+        <div id="FAAH-dia6-separador">Cerrado</div>
+        <div id="FAAH-dia6-cierre">-</div>
+    </div>
+    </div>
+    </div> 
+
+
+
+<h2 id="campusIslaCartuja">Campus Isla de la Cartuja</h2>
+
+
+<!-- Biblioteca de Ingenieros-->
+<div id="ING" class="horariobib par">
+<div class="div1">     
+    <div class="biblioteca"> Biblioteca de Ingenieros </div>
+    <div id="ING-estadoBiblioteca" class="estadoBiblioteca">---</div>
+</div>
+
+<div class="div2"> 
+    <div class="anterior"> <button id="ING-prevWeek"><i class="fa fa-arrow-left" aria-hidden="true"></i></button></div>
+    <div id="ING-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
+    <div class="siguiente"><button id="ING-nextWeek"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+</div>
+
+<div  class="semana">
+<div class="dayContainer lunes"> 
+    <div id="ING-dia0-nombre">lun</div>
+    <div id="ING-dia0-apertura">8:00</div>
+    <div id="ING-dia0-separador">-</div>
+    <div id="ING-dia0-cierre">21:00</div>
+</div>
+<div class="dayContainer martes"> 
+    <div id="ING-dia1-nombre">mar</div>
+    <div id="ING-dia1-apertura">8:00</div>
+    <div id="ING-dia1-separador">-</div>
+    <div id="ING-dia1-cierre">21:00</div>
+</div>
+<div class="dayContainer miercoles"> 
+    <div id="ING-dia2-nombre">mié</div>
+    <div id="ING-dia2-apertura">8:00</div>
+    <div id="ING-dia2-separador">-</div>
+    <div id="ING-dia2-cierre">21:00</div>
+</div>
+<div class="dayContainer jueves"> 
+    <div id="ING-dia3-nombre">jue</div>
+    <div id="ING-dia3-apertura">8:00</div>
+    <div id="ING-dia3-separador">-</div>
+    <div id="ING-dia3-cierre">21:00</div>
+</div>
+<div class="dayContainer viernes"> 
+    <div id="ING-dia4-nombre">vie</div>
+    <div id="ING-dia4-apertura">8:00</div>
+    <div id="ING-dia4-separador">-</div>
+    <div id="ING-dia4-cierre">21:00</div>
+</div>
+<div class="dayContainer sabado"> 
+    <div id="ING-dia5-nombre">sab</div>
+    <div id="ING-dia5-apertura">-</div>
+    <div id="ING-dia5-separador">Cerrado</div>
+    <div id="ING-dia5-cierre">-</div>
+</div>
+<div class="dayContainer domingo"> 
+    <div id="ING-dia6-nombre">dom</div>
+    <div id="ING-dia6-apertura">-</div>
+    <div id="ING-dia6-separador">Cerrado</div>
+    <div id="ING-dia6-cierre">-</div>
+</div>
+</div>
+</div> 
+
+<!-- Biblioteca de Comunicación Biblioteca-->
+<div id="COMB" class="horariobib impar">
+    <div class="div1">     
+        <div class="biblioteca"> Biblioteca de Comunicación </div>
+        <div id="COMB-estadoBiblioteca" class="estadoBiblioteca">---</div>
+    </div>
+    
+    <div class="div2"> 
+        <div class="anterior"> <button id="COMB-prevWeek"><i class="fa fa-arrow-left" aria-hidden="true"></i></button></div>
+        <div id="COMB-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
+        <div class="siguiente"><button id="COMB-nextWeek"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+    </div>
+    
+    <div  class="semana">
+    <div class="dayContainer lunes"> 
+        <div id="COMB-dia0-nombre">lun</div>
+        <div id="COMB-dia0-apertura">8:00</div>
+        <div id="COMB-dia0-separador">-</div>
+        <div id="COMB-dia0-cierre">21:00</div>
+    </div>
+    <div class="dayContainer martes"> 
+        <div id="COMB-dia1-nombre">mar</div>
+        <div id="COMB-dia1-apertura">8:00</div>
+        <div id="COMB-dia1-separador">-</div>
+        <div id="COMB-dia1-cierre">21:00</div>
+    </div>
+    <div class="dayContainer miercoles"> 
+        <div id="COMB-dia2-nombre">mié</div>
+        <div id="COMB-dia2-apertura">8:00</div>
+        <div id="COMB-dia2-separador">-</div>
+        <div id="COMB-dia2-cierre">21:00</div>
+    </div>
+    <div class="dayContainer jueves"> 
+        <div id="COMB-dia3-nombre">jue</div>
+        <div id="COMB-dia3-apertura">8:00</div>
+        <div id="COMB-dia3-separador">-</div>
+        <div id="COMB-dia3-cierre">21:00</div>
+    </div>
+    <div class="dayContainer viernes"> 
+        <div id="COMB-dia4-nombre">vie</div>
+        <div id="COMB-dia4-apertura">8:00</div>
+        <div id="COMB-dia4-separador">-</div>
+        <div id="COMB-dia4-cierre">21:00</div>
+    </div>
+    <div class="dayContainer sabado"> 
+        <div id="COMB-dia5-nombre">sab</div>
+        <div id="COMB-dia5-apertura">-</div>
+        <div id="COMB-dia5-separador">Cerrado</div>
+        <div id="COMB-dia5-cierre">-</div>
+    </div>
+    <div class="dayContainer domingo"> 
+        <div id="COMB-dia6-nombre">dom</div>
+        <div id="COMB-dia6-apertura">-</div>
+        <div id="COMB-dia6-separador">Cerrado</div>
+        <div id="COMB-dia6-cierre">-</div>
+    </div>
+    </div>
+    </div> 
+
+    <!-- Biblioteca de Comunicación Videoteca-->
+<div id="COMV" class="horariobib par">
+    <div class="div1">     
+        <div class="biblioteca"> Videoteca de Comunicación </div>
+        <div id="COMV-estadoBiblioteca" class="estadoBiblioteca">---</div>
+    </div>
+    
+    <div class="div2"> 
+        <div class="anterior"> <button id="COMV-prevWeek"><i class="fa fa-arrow-left" aria-hidden="true"></i></button></div>
+        <div id="COMV-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
+        <div class="siguiente"><button id="COMV-nextWeek"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+    </div>
+    
+    <div  class="semana">
+    <div class="dayContainer lunes"> 
+        <div id="COMV-dia0-nombre">lun</div>
+        <div id="COMV-dia0-apertura">8:00</div>
+        <div id="COMV-dia0-separador">-</div>
+        <div id="COMV-dia0-cierre">21:00</div>
+    </div>
+    <div class="dayContainer martes"> 
+        <div id="COMV-dia1-nombre">mar</div>
+        <div id="COMV-dia1-apertura">8:00</div>
+        <div id="COMV-dia1-separador">-</div>
+        <div id="COMV-dia1-cierre">21:00</div>
+    </div>
+    <div class="dayContainer miercoles"> 
+        <div id="COMV-dia2-nombre">mié</div>
+        <div id="COMV-dia2-apertura">8:00</div>
+        <div id="COMV-dia2-separador">-</div>
+        <div id="COMV-dia2-cierre">21:00</div>
+    </div>
+    <div class="dayContainer jueves"> 
+        <div id="COMV-dia3-nombre">jue</div>
+        <div id="COMV-dia3-apertura">8:00</div>
+        <div id="COMV-dia3-separador">-</div>
+        <div id="COMV-dia3-cierre">21:00</div>
+    </div>
+    <div class="dayContainer viernes"> 
+        <div id="COMV-dia4-nombre">vie</div>
+        <div id="COMV-dia4-apertura">8:00</div>
+        <div id="COMV-dia4-separador">-</div>
+        <div id="COMV-dia4-cierre">21:00</div>
+    </div>
+    <div class="dayContainer sabado"> 
+        <div id="COMV-dia5-nombre">sab</div>
+        <div id="COMV-dia5-apertura">-</div>
+        <div id="COMV-dia5-separador">Cerrado</div>
+        <div id="COMV-dia5-cierre">-</div>
+    </div>
+    <div class="dayContainer domingo"> 
+        <div id="COMV-dia6-nombre">dom</div>
+        <div id="COMV-dia6-apertura">-</div>
+        <div id="COMV-dia6-separador">Cerrado</div>
+        <div id="COMV-dia6-cierre">-</div>
+    </div>
+    </div>
+    </div> 
+
+<h2 id="campusReinaMercedes">Campus Reina Mercedes</h2>
+
+<!-- Biblioteca Crai Antonio de Ulloa-->
+<div id="CRAI" class="horariobib par">
+    <div  class="div1">     
+        <div class="biblioteca"> CRAI Antonio de Ulloa </div>
+        <div id="CRAI-estadoBiblioteca" class="estadoBiblioteca">---</div>
+    </div>
+    
+    <div class="div2"> 
+        <div class="anterior"> <button id="CRAI-prevWeek"><i class="fa fa-arrow-left" aria-hidden="true"></i></button></div>
+        <div id="CRAI-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
+        <div class="siguiente"><button id="CRAI-nextWeek"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+    </div>
+    
+    <div class="semana">
+    <div class="dayContainer lunes"> 
+        <div id="CRAI-dia0-nombre">lun</div>
+        <div id="CRAI-dia0-apertura">8:00</div>
+        <div id="CRAI-dia0-separador">-</div>
+        <div id="CRAI-dia0-cierre">21:00</div>
+    </div>
+    <div class="dayContainer martes"> 
+        <div id="CRAI-dia1-nombre">mar</div>
+        <div id="CRAI-dia1-apertura">8:00</div>
+        <div id="CRAI-dia1-separador">-</div>
+        <div id="CRAI-dia1-cierre">21:00</div>
+    </div>
+    <div class="dayContainer miercoles"> 
+        <div id="CRAI-dia2-nombre">mié</div>
+        <div id="CRAI-dia2-apertura">8:00</div>
+        <div id="CRAI-dia2-separador">-</div>
+        <div id="CRAI-dia2-cierre">21:00</div>
+    </div>
+    <div class="dayContainer jueves"> 
+        <div id="CRAI-dia3-nombre">jue</div>
+        <div id="CRAI-dia3-apertura">8:00</div>
+        <div id="CRAI-dia3-separador">-</div>
+        <div id="CRAI-dia3-cierre">21:00</div>
+    </div>
+    <div class="dayContainer viernes"> 
+        <div id="CRAI-dia4-nombre">vie</div>
+        <div id="CRAI-dia4-apertura">8:00</div>
+        <div id="CRAI-dia4-separador">-</div>
+        <div id="CRAI-dia4-cierre">21:00</div>
+    </div>
+    <div class="dayContainer sabado"> 
+        <div id="CRAI-dia5-nombre">sab</div>
+        <div id="CRAI-dia5-apertura">-</div>
+        <div id="CRAI-dia5-separador">Cerrado</div>
+        <div id="CRAI-dia5-cierre">-</div>
+    </div>
+    <div class="dayContainer domingo"> 
+        <div id="CRAI-dia6-nombre">dom</div>
+        <div id="CRAI-dia6-apertura">-</div>
+        <div id="CRAI-dia6-separador">Cerrado</div>
+        <div id="CRAI-dia6-cierre">-</div>
+    </div>
+    </div>
+    </div> 
+
+<!-- Biblioteca de Arquitectura-->
+<div id="ARQ" class="horariobib impar">
+    <div class="div1">     
+        <div class="biblioteca"> Biblioteca de Arquitectura </div>
+        <div id="ARQ-estadoBiblioteca" class="estadoBiblioteca">---</div>
+    </div>
+    
+    <div class="div2"> 
+        <div class="anterior"> <button id="ARQ-prevWeek"><i class="fa fa-arrow-left" aria-hidden="true"></i></button></div>
+        <div id="ARQ-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
+        <div class="siguiente"><button id="ARQ-nextWeek"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+    </div>
+    
+    <div  class="semana">
+    <div class="dayContainer lunes"> 
+        <div id="ARQ-dia0-nombre">lun</div>
+        <div id="ARQ-dia0-apertura">8:00</div>
+        <div id="ARQ-dia0-separador">-</div>
+        <div id="ARQ-dia0-cierre">21:00</div>
+    </div>
+    <div class="dayContainer martes"> 
+        <div id="ARQ-dia1-nombre">mar</div>
+        <div id="ARQ-dia1-apertura">8:00</div>
+        <div id="ARQ-dia1-separador">-</div>
+        <div id="ARQ-dia1-cierre">21:00</div>
+    </div>
+    <div class="dayContainer miercoles"> 
+        <div id="ARQ-dia2-nombre">mié</div>
+        <div id="ARQ-dia2-apertura">8:00</div>
+        <div id="ARQ-dia2-separador">-</div>
+        <div id="ARQ-dia2-cierre">21:00</div>
+    </div>
+    <div class="dayContainer jueves"> 
+        <div id="ARQ-dia3-nombre">jue</div>
+        <div id="ARQ-dia3-apertura">8:00</div>
+        <div id="ARQ-dia3-separador">-</div>
+        <div id="ARQ-dia3-cierre">21:00</div>
+    </div>
+    <div class="dayContainer viernes"> 
+        <div id="ARQ-dia4-nombre">vie</div>
+        <div id="ARQ-dia4-apertura">8:00</div>
+        <div id="ARQ-dia4-separador">-</div>
+        <div id="ARQ-dia4-cierre">21:00</div>
+    </div>
+    <div class="dayContainer sabado"> 
+        <div id="ARQ-dia5-nombre">sab</div>
+        <div id="ARQ-dia5-apertura">-</div>
+        <div id="ARQ-dia5-separador">Cerrado</div>
+        <div id="ARQ-dia5-cierre">-</div>
+    </div>
+    <div class="dayContainer domingo"> 
+        <div id="ARQ-dia6-nombre">dom</div>
+        <div id="ARQ-dia6-apertura">-</div>
+        <div id="ARQ-dia6-separador">Cerrado</div>
+        <div id="ARQ-dia6-cierre">-</div>
+    </div>
+    </div>
+    </div> 
+
+<!-- Biblioteca de Matemáticas-->
+<div id="MAT" class="horariobib par">
+    <div class="div1">     
+        <div class="biblioteca"> Biblioteca de Matemáticas </div>
+        <div id="MAT-estadoBiblioteca" class="estadoBiblioteca">---</div>
+    </div>
+
+    <div class="div2"> 
+        <div class="anterior"> <button id="MAT-prevWeek"><i class="fa fa-arrow-left" aria-hidden="true"></i></button></div>
+        <div id="MAT-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
+        <div class="siguiente"><button id="MAT-nextWeek"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+   </div>
+
+   <div  class="semana">
+    <div class="dayContainer lunes"> 
+        <div id="MAT-dia0-nombre">lun</div>
+        <div id="MAT-dia0-apertura">8:00</div>
+        <div id="MAT-dia0-separador">-</div>
+        <div id="MAT-dia0-cierre">21:00</div>
+    </div>
+    <div class="dayContainer martes"> 
+        <div id="MAT-dia1-nombre">mar</div>
+        <div id="MAT-dia1-apertura">8:00</div>
+        <div id="MAT-dia1-separador">-</div>
+        <div id="MAT-dia1-cierre">21:00</div>
+    </div>
+    <div class="dayContainer miercoles"> 
+        <div id="MAT-dia2-nombre">mié</div>
+        <div id="MAT-dia2-apertura">8:00</div>
+        <div id="MAT-dia2-separador">-</div>
+        <div id="MAT-dia2-cierre">21:00</div>
+    </div>
+    <div class="dayContainer jueves"> 
+        <div id="MAT-dia3-nombre">jue</div>
+        <div id="MAT-dia3-apertura">8:00</div>
+        <div id="MAT-dia3-separador">-</div>
+        <div id="MAT-dia3-cierre">21:00</div>
+    </div>
+    <div class="dayContainer viernes"> 
+        <div id="MAT-dia4-nombre">vie</div>
+        <div id="MAT-dia4-apertura">8:00</div>
+        <div id="MAT-dia4-separador">-</div>
+        <div id="MAT-dia4-cierre">21:00</div>
+    </div>
+    <div class="dayContainer sabado"> 
+        <div id="MAT-dia5-nombre">sab</div>
+        <div id="MAT-dia5-apertura">-</div>
+        <div id="MAT-dia5-separador">Cerrado</div>
+        <div id="MAT-dia5-cierre">-</div>
+    </div>
+    <div class="dayContainer domingo"> 
+        <div id="MAT-dia6-nombre">dom</div>
+        <div id="MAT-dia6-apertura">-</div>
+        <div id="MAT-dia6-separador">Cerrado</div>
+        <div id="MAT-dia6-cierre">-</div>
+    </div>
+</div>
+</div> 
+
+<!-- Biblioteca de Informática -->
+<div id="INF" class="horariobib impar">
+    <div class="div1">     
+        <div class="biblioteca"> Biblioteca de Informática</div>
+        <div id="INF-estadoBiblioteca" class="estadoBiblioteca">---</div>
+    </div>
+    
+    <div class="div2"> 
+        <div class="anterior"> <button id="INF-prevWeek"><i class="fa fa-arrow-left" aria-hidden="true"></i></button></div>
+        <div id="INF-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
+        <div class="siguiente"><button id="INF-nextWeek"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+    </div>
+    
+    <div  class="semana">
+    <div class="dayContainer lunes"> 
+        <div id="INF-dia0-nombre">lun</div>
+        <div id="INF-dia0-apertura">8:00</div>
+        <div id="INF-dia0-separador">-</div>
+        <div id="INF-dia0-cierre">21:00</div>
+    </div>
+    <div class="dayContainer martes"> 
+        <div id="INF-dia1-nombre">mar</div>
+        <div id="INF-dia1-apertura">8:00</div>
+        <div id="INF-dia1-separador">-</div>
+        <div id="INF-dia1-cierre">21:00</div>
+    </div>
+    <div class="dayContainer miercoles"> 
+        <div id="INF-dia2-nombre">mié</div>
+        <div id="INF-dia2-apertura">8:00</div>
+        <div id="INF-dia2-separador">-</div>
+        <div id="INF-dia2-cierre">21:00</div>
+    </div>
+    <div class="dayContainer jueves"> 
+        <div id="INF-dia3-nombre">jue</div>
+        <div id="INF-dia3-apertura">8:00</div>
+        <div id="INF-dia3-separador">-</div>
+        <div id="INF-dia3-cierre">21:00</div>
+    </div>
+    <div class="dayContainer viernes"> 
+        <div id="INF-dia4-nombre">vie</div>
+        <div id="INF-dia4-apertura">8:00</div>
+        <div id="INF-dia4-separador">-</div>
+        <div id="INF-dia4-cierre">21:00</div>
+    </div>
+    <div class="dayContainer sabado"> 
+        <div id="INF-dia5-nombre">sab</div>
+        <div id="INF-dia5-apertura">-</div>
+        <div id="INF-dia5-separador">Cerrado</div>
+        <div id="INF-dia5-cierre">-</div>
+    </div>
+    <div class="dayContainer domingo"> 
+        <div id="INF-dia6-nombre">dom</div>
+        <div id="INF-dia6-apertura">-</div>
+        <div id="INF-dia6-separador">Cerrado</div>
+        <div id="INF-dia6-cierre">-</div>
+    </div>
+    </div>
+    </div> 
+
+<h2 id="campusRamonCajal">Campus Ramón y Cajal</h2>
+
+<!-- Biblioteca de Educación -->
+<div id="EDU" class="horariobib par">
+    <div class="div1">     
+        <div class="biblioteca"> Biblioteca de Educación</div>
+        <div id="EDU-estadoBiblioteca" class="estadoBiblioteca">---</div>
+    </div>
+    
+    <div class="div2"> 
+        <div class="anterior"> <button id="EDU-prevWeek"><i class="fa fa-arrow-left" aria-hidden="true"></i></button></div>
+        <div id="EDU-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
+        <div class="siguiente"><button id="EDU-nextWeek"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+    </div>
+    
+    <div  class="semana">
+    <div class="dayContainer lunes"> 
+        <div id="EDU-dia0-nombre">lun</div>
+        <div id="EDU-dia0-apertura">8:00</div>
+        <div id="EDU-dia0-separador">-</div>
+        <div id="EDU-dia0-cierre">21:00</div>
+    </div>
+    <div class="dayContainer martes"> 
+        <div id="EDU-dia1-nombre">mar</div>
+        <div id="EDU-dia1-apertura">8:00</div>
+        <div id="EDU-dia1-separador">-</div>
+        <div id="EDU-dia1-cierre">21:00</div>
+    </div>
+    <div class="dayContainer miercoles"> 
+        <div id="EDU-dia2-nombre">mié</div>
+        <div id="EDU-dia2-apertura">8:00</div>
+        <div id="EDU-dia2-separador">-</div>
+        <div id="EDU-dia2-cierre">21:00</div>
+    </div>
+    <div class="dayContainer jueves"> 
+        <div id="EDU-dia3-nombre">jue</div>
+        <div id="EDU-dia3-apertura">8:00</div>
+        <div id="EDU-dia3-separador">-</div>
+        <div id="EDU-dia3-cierre">21:00</div>
+    </div>
+    <div class="dayContainer viernes"> 
+        <div id="EDU-dia4-nombre">vie</div>
+        <div id="EDU-dia4-apertura">8:00</div>
+        <div id="EDU-dia4-separador">-</div>
+        <div id="EDU-dia4-cierre">21:00</div>
+    </div>
+    <div class="dayContainer sabado"> 
+        <div id="EDU-dia5-nombre">sab</div>
+        <div id="EDU-dia5-apertura">-</div>
+        <div id="EDU-dia5-separador">Cerrado</div>
+        <div id="EDU-dia5-cierre">-</div>
+    </div>
+    <div class="dayContainer domingo"> 
+        <div id="EDU-dia6-nombre">dom</div>
+        <div id="EDU-dia6-apertura">-</div>
+        <div id="EDU-dia6-separador">Cerrado</div>
+        <div id="EDU-dia6-cierre">-</div>
+    </div>
+    </div>
+    </div> 
+
+<!-- Biblioteca de Derecho  -->
+<div id="DYCT" class="horariobib impar">
+    <div class="div1">     
+        <div class="biblioteca"> Biblioteca de Derecho y Ciencias del Trabajo</div>
+        <div id="DYCT-estadoBiblioteca" class="estadoBiblioteca">---</div>
+    </div>
+    
+    <div class="div2"> 
+        <div class="anterior"> <button id="DYCT-prevWeek"><i class="fa fa-arrow-left" aria-hidden="true"></i></button></div>
+        <div id="DYCT-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
+        <div class="siguiente"><button id="DYCT-nextWeek"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+    </div>
+    
+    <div  class="semana">
+    <div class="dayContainer lunes"> 
+        <div id="DYCT-dia0-nombre">lun</div>
+        <div id="DYCT-dia0-apertura">8:00</div>
+        <div id="DYCT-dia0-separador">-</div>
+        <div id="DYCT-dia0-cierre">21:00</div>
+    </div>
+    <div class="dayContainer martes"> 
+        <div id="DYCT-dia1-nombre">mar</div>
+        <div id="DYCT-dia1-apertura">8:00</div>
+        <div id="DYCT-dia1-separador">-</div>
+        <div id="DYCT-dia1-cierre">21:00</div>
+    </div>
+    <div class="dayContainer miercoles"> 
+        <div id="DYCT-dia2-nombre">mié</div>
+        <div id="DYCT-dia2-apertura">8:00</div>
+        <div id="DYCT-dia2-separador">-</div>
+        <div id="DYCT-dia2-cierre">21:00</div>
+    </div>
+    <div class="dayContainer jueves"> 
+        <div id="DYCT-dia3-nombre">jue</div>
+        <div id="DYCT-dia3-apertura">8:00</div>
+        <div id="DYCT-dia3-separador">-</div>
+        <div id="DYCT-dia3-cierre">21:00</div>
+    </div>
+    <div class="dayContainer viernes"> 
+        <div id="DYCT-dia4-nombre">vie</div>
+        <div id="DYCT-dia4-apertura">8:00</div>
+        <div id="DYCT-dia4-separador">-</div>
+        <div id="DYCT-dia4-cierre">21:00</div>
+    </div>
+    <div class="dayContainer sabado"> 
+        <div id="DYCT-dia5-nombre">sab</div>
+        <div id="DYCT-dia5-apertura">-</div>
+        <div id="DYCT-dia5-separador">Cerrado</div>
+        <div id="DYCT-dia5-cierre">-</div>
+    </div>
+    <div class="dayContainer domingo"> 
+        <div id="DYCT-dia6-nombre">dom</div>
+        <div id="DYCT-dia6-apertura">-</div>
+        <div id="DYCT-dia6-separador">Cerrado</div>
+        <div id="DYCT-dia6-cierre">-</div>
+    </div>
+    </div>
+    </div> 
+
+    <!-- Biblioteca de Económicas  -->
+<div id="ECO" class="horariobib par">
+    <div class="div1">     
+        <div class="biblioteca"> Biblioteca de Económicas</div>
+        <div id="ECO-estadoBiblioteca" class="estadoBiblioteca">---</div>
+    </div>
+    
+    <div class="div2"> 
+        <div class="anterior"> <button id="ECO-prevWeek"><i class="fa fa-arrow-left" aria-hidden="true"></i></button></div>
+        <div id="ECO-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
+        <div class="siguiente"><button id="ECO-nextWeek"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+    </div>
+    
+    <div  class="semana">
+    <div class="dayContainer lunes"> 
+        <div id="ECO-dia0-nombre">lun</div>
+        <div id="ECO-dia0-apertura">8:00</div>
+        <div id="ECO-dia0-separador">-</div>
+        <div id="ECO-dia0-cierre">21:00</div>
+    </div>
+    <div class="dayContainer martes"> 
+        <div id="ECO-dia1-nombre">mar</div>
+        <div id="ECO-dia1-apertura">8:00</div>
+        <div id="ECO-dia1-separador">-</div>
+        <div id="ECO-dia1-cierre">21:00</div>
+    </div>
+    <div class="dayContainer miercoles"> 
+        <div id="ECO-dia2-nombre">mié</div>
+        <div id="ECO-dia2-apertura">8:00</div>
+        <div id="ECO-dia2-separador">-</div>
+        <div id="ECO-dia2-cierre">21:00</div>
+    </div>
+    <div class="dayContainer jueves"> 
+        <div id="ECO-dia3-nombre">jue</div>
+        <div id="ECO-dia3-apertura">8:00</div>
+        <div id="ECO-dia3-separador">-</div>
+        <div id="ECO-dia3-cierre">21:00</div>
+    </div>
+    <div class="dayContainer viernes"> 
+        <div id="ECO-dia4-nombre">vie</div>
+        <div id="ECO-dia4-apertura">8:00</div>
+        <div id="ECO-dia4-separador">-</div>
+        <div id="ECO-dia4-cierre">21:00</div>
+    </div>
+    <div class="dayContainer sabado"> 
+        <div id="ECO-dia5-nombre">sab</div>
+        <div id="ECO-dia5-apertura">-</div>
+        <div id="ECO-dia5-separador">Cerrado</div>
+        <div id="ECO-dia5-cierre">-</div>
+    </div>
+    <div class="dayContainer domingo"> 
+        <div id="ECO-dia6-nombre">dom</div>
+        <div id="ECO-dia6-apertura">-</div>
+        <div id="ECO-dia6-separador">Cerrado</div>
+        <div id="ECO-dia6-cierre">-</div>
+    </div>
+    </div>
+    </div> 
+
+<!-- Biblioteca de Turismo y Finanzas  -->
+<div id="TYF" class="horariobib impar">
+    <div class="div1">     
+        <div class="biblioteca"> Biblioteca de Turismo y Finanzas</div>
+        <div id="TYF-estadoBiblioteca" class="estadoBiblioteca">---</div>
+    </div>
+    
+    <div class="div2"> 
+        <div class="anterior"> <button id="TYF-prevWeek"><i class="fa fa-arrow-left" aria-hidden="true"></i></button></div>
+        <div id="TYF-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
+        <div class="siguiente"><button id="TYF-nextWeek"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+    </div>
+    
+    <div  class="semana">
+    <div class="dayContainer lunes"> 
+        <div id="TYF-dia0-nombre">lun</div>
+        <div id="TYF-dia0-apertura">8:00</div>
+        <div id="TYF-dia0-separador">-</div>
+        <div id="TYF-dia0-cierre">21:00</div>
+    </div>
+    <div class="dayContainer martes"> 
+        <div id="TYF-dia1-nombre">mar</div>
+        <div id="TYF-dia1-apertura">8:00</div>
+        <div id="TYF-dia1-separador">-</div>
+        <div id="TYF-dia1-cierre">21:00</div>
+    </div>
+    <div class="dayContainer miercoles"> 
+        <div id="TYF-dia2-nombre">mié</div>
+        <div id="TYF-dia2-apertura">8:00</div>
+        <div id="TYF-dia2-separador">-</div>
+        <div id="TYF-dia2-cierre">21:00</div>
+    </div>
+    <div class="dayContainer jueves"> 
+        <div id="TYF-dia3-nombre">jue</div>
+        <div id="TYF-dia3-apertura">8:00</div>
+        <div id="TYF-dia3-separador">-</div>
+        <div id="TYF-dia3-cierre">21:00</div>
+    </div>
+    <div class="dayContainer viernes"> 
+        <div id="TYF-dia4-nombre">vie</div>
+        <div id="TYF-dia4-apertura">8:00</div>
+        <div id="TYF-dia4-separador">-</div>
+        <div id="TYF-dia4-cierre">21:00</div>
+    </div>
+    <div class="dayContainer sabado"> 
+        <div id="TYF-dia5-nombre">sab</div>
+        <div id="TYF-dia5-apertura">-</div>
+        <div id="TYF-dia5-separador">Cerrado</div>
+        <div id="TYF-dia5-cierre">-</div>
+    </div>
+    <div class="dayContainer domingo"> 
+        <div id="TYF-dia6-nombre">dom</div>
+        <div id="TYF-dia6-apertura">-</div>
+        <div id="TYF-dia6-separador">Cerrado</div>
+        <div id="TYF-dia6-cierre">-</div>
+    </div>
+    </div>
+    </div> 
+
+    <!-- Biblioteca de Psicología y Filosofía  -->
+<div id="PYF" class="horariobib par">
+    <div class="div1">     
+        <div class="biblioteca"> Biblioteca de Psicología y Filosofía</div>
+        <div id="PYF-estadoBiblioteca" class="estadoBiblioteca">---</div>
+    </div>
+    
+    <div class="div2"> 
+        <div class="anterior"> <button id="PYF-prevWeek"><i class="fa fa-arrow-left" aria-hidden="true"></i></button></div>
+        <div id="PYF-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
+        <div class="siguiente"><button id="PYF-nextWeek"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+    </div>
+    
+    <div  class="semana">
+    <div class="dayContainer lunes"> 
+        <div id="PYF-dia0-nombre">lun</div>
+        <div id="PYF-dia0-apertura">8:00</div>
+        <div id="PYF-dia0-separador">-</div>
+        <div id="PYF-dia0-cierre">21:00</div>
+    </div>
+    <div class="dayContainer martes"> 
+        <div id="PYF-dia1-nombre">mar</div>
+        <div id="PYF-dia1-apertura">8:00</div>
+        <div id="PYF-dia1-separador">-</div>
+        <div id="PYF-dia1-cierre">21:00</div>
+    </div>
+    <div class="dayContainer miercoles"> 
+        <div id="PYF-dia2-nombre">mié</div>
+        <div id="PYF-dia2-apertura">8:00</div>
+        <div id="PYF-dia2-separador">-</div>
+        <div id="PYF-dia2-cierre">21:00</div>
+    </div>
+    <div class="dayContainer jueves"> 
+        <div id="PYF-dia3-nombre">jue</div>
+        <div id="PYF-dia3-apertura">8:00</div>
+        <div id="PYF-dia3-separador">-</div>
+        <div id="PYF-dia3-cierre">21:00</div>
+    </div>
+    <div class="dayContainer viernes"> 
+        <div id="PYF-dia4-nombre">vie</div>
+        <div id="PYF-dia4-apertura">8:00</div>
+        <div id="PYF-dia4-separador">-</div>
+        <div id="PYF-dia4-cierre">21:00</div>
+    </div>
+    <div class="dayContainer sabado"> 
+        <div id="PYF-dia5-nombre">sab</div>
+        <div id="PYF-dia5-apertura">-</div>
+        <div id="PYF-dia5-separador">Cerrado</div>
+        <div id="PYF-dia5-cierre">-</div>
+    </div>
+    <div class="dayContainer domingo"> 
+        <div id="PYF-dia6-nombre">dom</div>
+        <div id="PYF-dia6-apertura">-</div>
+        <div id="PYF-dia6-separador">Cerrado</div>
+        <div id="PYF-dia6-cierre">-</div>
+    </div>
+    </div>
+    </div> 
+
+    
+<h2 id="campusMacarena">Campus Macarena</h2>
+
+<!-- Biblioteca de Centros de la Salud  -->
+<div id="CS" class="horariobib par">
+    <div class="div1">     
+        <div class="biblioteca"> Biblioteca de Centros de la Salud</div>
+        <div id="CS-estadoBiblioteca" class="estadoBiblioteca">---</div>
+    </div>
+    
+    <div class="div2"> 
+        <div class="anterior"> <button id="CS-prevWeek"><i class="fa fa-arrow-left" aria-hidden="true"></i></button></div>
+        <div id="CS-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
+        <div class="siguiente"><button id="CS-nextWeek"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+    </div>
+    
+    <div  class="semana">
+    <div class="dayContainer lunes"> 
+        <div id="CS-dia0-nombre">lun</div>
+        <div id="CS-dia0-apertura">8:00</div>
+        <div id="CS-dia0-separador">-</div>
+        <div id="CS-dia0-cierre">21:00</div>
+    </div>
+    <div class="dayContainer martes"> 
+        <div id="CS-dia1-nombre">mar</div>
+        <div id="CS-dia1-apertura">8:00</div>
+        <div id="CS-dia1-separador">-</div>
+        <div id="CS-dia1-cierre">21:00</div>
+    </div>
+    <div class="dayContainer miercoles"> 
+        <div id="CS-dia2-nombre">mié</div>
+        <div id="CS-dia2-apertura">8:00</div>
+        <div id="CS-dia2-separador">-</div>
+        <div id="CS-dia2-cierre">21:00</div>
+    </div>
+    <div class="dayContainer jueves"> 
+        <div id="CS-dia3-nombre">jue</div>
+        <div id="CS-dia3-apertura">8:00</div>
+        <div id="CS-dia3-separador">-</div>
+        <div id="CS-dia3-cierre">21:00</div>
+    </div>
+    <div class="dayContainer viernes"> 
+        <div id="CS-dia4-nombre">vie</div>
+        <div id="CS-dia4-apertura">8:00</div>
+        <div id="CS-dia4-separador">-</div>
+        <div id="CS-dia4-cierre">21:00</div>
+    </div>
+    <div class="dayContainer sabado"> 
+        <div id="CS-dia5-nombre">sab</div>
+        <div id="CS-dia5-apertura">-</div>
+        <div id="CS-dia5-separador">Cerrado</div>
+        <div id="CS-dia5-cierre">-</div>
+    </div>
+    <div class="dayContainer domingo"> 
+        <div id="CS-dia6-nombre">dom</div>
+        <div id="CS-dia6-apertura">-</div>
+        <div id="CS-dia6-separador">Cerrado</div>
+        <div id="CS-dia6-cierre">-</div>
+    </div>
+    </div>
+    </div> 
+
+<h2 id="campusRectorado">Campus Rectorado</h2>
+
+<!-- Biblioteca de Humanidades SC  -->
+<div id="HUMSC" class="horariobib par">
+    <div class="div1">     
+        <div class="biblioteca"> Humanidades - Sala Central</div>
+        <div id="HUMSC-estadoBiblioteca" class="estadoBiblioteca">---</div>
+    </div>
+    
+    <div class="div2"> 
+        <div class="anterior"> <button id="HUMSC-prevWeek"><i class="fa fa-arrow-left" aria-hidden="true"></i></button></div>
+        <div id="HUMSC-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
+        <div class="siguiente"><button id="HUMSC-nextWeek"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+    </div>
+    
+    <div  class="semana">
+    <div class="dayContainer lunes"> 
+        <div id="HUMSC-dia0-nombre">lun</div>
+        <div id="HUMSC-dia0-apertura">8:00</div>
+        <div id="HUMSC-dia0-separador">-</div>
+        <div id="HUMSC-dia0-cierre">21:00</div>
+    </div>
+    <div class="dayContainer martes"> 
+        <div id="HUMSC-dia1-nombre">mar</div>
+        <div id="HUMSC-dia1-apertura">8:00</div>
+        <div id="HUMSC-dia1-separador">-</div>
+        <div id="HUMSC-dia1-cierre">21:00</div>
+    </div>
+    <div class="dayContainer miercoles"> 
+        <div id="HUMSC-dia2-nombre">mié</div>
+        <div id="HUMSC-dia2-apertura">8:00</div>
+        <div id="HUMSC-dia2-separador">-</div>
+        <div id="HUMSC-dia2-cierre">21:00</div>
+    </div>
+    <div class="dayContainer jueves"> 
+        <div id="HUMSC-dia3-nombre">jue</div>
+        <div id="HUMSC-dia3-apertura">8:00</div>
+        <div id="HUMSC-dia3-separador">-</div>
+        <div id="HUMSC-dia3-cierre">21:00</div>
+    </div>
+    <div class="dayContainer viernes"> 
+        <div id="HUMSC-dia4-nombre">vie</div>
+        <div id="HUMSC-dia4-apertura">8:00</div>
+        <div id="HUMSC-dia4-separador">-</div>
+        <div id="HUMSC-dia4-cierre">21:00</div>
+    </div>
+    <div class="dayContainer sabado"> 
+        <div id="HUMSC-dia5-nombre">sab</div>
+        <div id="HUMSC-dia5-apertura">-</div>
+        <div id="HUMSC-dia5-separador">Cerrado</div>
+        <div id="HUMSC-dia5-cierre">-</div>
+    </div>
+    <div class="dayContainer domingo"> 
+        <div id="HUMSC-dia6-nombre">dom</div>
+        <div id="HUMSC-dia6-apertura">-</div>
+        <div id="HUMSC-dia6-separador">Cerrado</div>
+        <div id="HUMSC-dia6-cierre">-</div>
+    </div>
+    </div>
+    </div> 
+
+<!-- Biblioteca de Humanidades SA  -->
+<div id="HUMSA" class="horariobib impar">
+    <div class="div1">     
+        <div class="biblioteca"> Humanidades - Sala Arte</div>
+        <div id="HUMSA-estadoBiblioteca" class="estadoBiblioteca">---</div>
+    </div>
+    
+    <div class="div2"> 
+        <div class="anterior"> <button id="HUMSA-prevWeek"><i class="fa fa-arrow-left" aria-hidden="true"></i></button></div>
+        <div id="HUMSA-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
+        <div class="siguiente"><button id="HUMSA-nextWeek"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+    </div>
+    
+    <div  class="semana">
+    <div class="dayContainer lunes"> 
+        <div id="HUMSA-dia0-nombre">lun</div>
+        <div id="HUMSA-dia0-apertura">8:00</div>
+        <div id="HUMSA-dia0-separador">-</div>
+        <div id="HUMSA-dia0-cierre">21:00</div>
+    </div>
+    <div class="dayContainer martes"> 
+        <div id="HUMSA-dia1-nombre">mar</div>
+        <div id="HUMSA-dia1-apertura">8:00</div>
+        <div id="HUMSA-dia1-separador">-</div>
+        <div id="HUMSA-dia1-cierre">21:00</div>
+    </div>
+    <div class="dayContainer miercoles"> 
+        <div id="HUMSA-dia2-nombre">mié</div>
+        <div id="HUMSA-dia2-apertura">8:00</div>
+        <div id="HUMSA-dia2-separador">-</div>
+        <div id="HUMSA-dia2-cierre">21:00</div>
+    </div>
+    <div class="dayContainer jueves"> 
+        <div id="HUMSA-dia3-nombre">jue</div>
+        <div id="HUMSA-dia3-apertura">8:00</div>
+        <div id="HUMSA-dia3-separador">-</div>
+        <div id="HUMSA-dia3-cierre">21:00</div>
+    </div>
+    <div class="dayContainer viernes"> 
+        <div id="HUMSA-dia4-nombre">vie</div>
+        <div id="HUMSA-dia4-apertura">8:00</div>
+        <div id="HUMSA-dia4-separador">-</div>
+        <div id="HUMSA-dia4-cierre">21:00</div>
+    </div>
+    <div class="dayContainer sabado"> 
+        <div id="HUMSA-dia5-nombre">sab</div>
+        <div id="HUMSA-dia5-apertura">-</div>
+        <div id="HUMSA-dia5-separador">Cerrado</div>
+        <div id="HUMSA-dia5-cierre">-</div>
+    </div>
+    <div class="dayContainer domingo"> 
+        <div id="HUMSA-dia6-nombre">dom</div>
+        <div id="HUMSA-dia6-apertura">-</div>
+        <div id="HUMSA-dia6-separador">Cerrado</div>
+        <div id="HUMSA-dia6-cierre">-</div>
+    </div>
+    </div>
+    </div> 
+
+    <!-- Biblioteca de Humanidades SB  -->
+<div id="HUMSB" class="horariobib par">
+    <div class="div1">     
+        <div class="biblioteca"> Humanidades - Sala Bécquer</div>
+        <div id="HUMSB-estadoBiblioteca" class="estadoBiblioteca">---</div>
+    </div>
+    
+    <div class="div2"> 
+        <div class="anterior"> <button id="HUMSB-prevWeek"><i class="fa fa-arrow-left" aria-hidden="true"></i></button></div>
+        <div id="HUMSB-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
+        <div class="siguiente"><button id="HUMSB-nextWeek"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+    </div>
+    
+    <div  class="semana">
+    <div class="dayContainer lunes"> 
+        <div id="HUMSB-dia0-nombre">lun</div>
+        <div id="HUMSB-dia0-apertura">8:00</div>
+        <div id="HUMSB-dia0-separador">-</div>
+        <div id="HUMSB-dia0-cierre">21:00</div>
+    </div>
+    <div class="dayContainer martes"> 
+        <div id="HUMSB-dia1-nombre">mar</div>
+        <div id="HUMSB-dia1-apertura">8:00</div>
+        <div id="HUMSB-dia1-separador">-</div>
+        <div id="HUMSB-dia1-cierre">21:00</div>
+    </div>
+    <div class="dayContainer miercoles"> 
+        <div id="HUMSB-dia2-nombre">mié</div>
+        <div id="HUMSB-dia2-apertura">8:00</div>
+        <div id="HUMSB-dia2-separador">-</div>
+        <div id="HUMSB-dia2-cierre">21:00</div>
+    </div>
+    <div class="dayContainer jueves"> 
+        <div id="HUMSB-dia3-nombre">jue</div>
+        <div id="HUMSB-dia3-apertura">8:00</div>
+        <div id="HUMSB-dia3-separador">-</div>
+        <div id="HUMSB-dia3-cierre">21:00</div>
+    </div>
+    <div class="dayContainer viernes"> 
+        <div id="HUMSB-dia4-nombre">vie</div>
+        <div id="HUMSB-dia4-apertura">8:00</div>
+        <div id="HUMSB-dia4-separador">-</div>
+        <div id="HUMSB-dia4-cierre">21:00</div>
+    </div>
+    <div class="dayContainer sabado"> 
+        <div id="HUMSB-dia5-nombre">sab</div>
+        <div id="HUMSB-dia5-apertura">-</div>
+        <div id="HUMSB-dia5-separador">Cerrado</div>
+        <div id="HUMSB-dia5-cierre">-</div>
+    </div>
+    <div class="dayContainer domingo"> 
+        <div id="HUMSB-dia6-nombre">dom</div>
+        <div id="HUMSB-dia6-apertura">-</div>
+        <div id="HUMSB-dia6-separador">Cerrado</div>
+        <div id="HUMSB-dia6-cierre">-</div>
+    </div>
+    </div>
+    </div> 
+
+    <!-- Biblioteca de Humanidades Manuales  -->
+<div id="HUMMA" class="horariobib impar">
+    <div class="div1">     
+        <div class="biblioteca"> Humanidades - Sala Manuales</div>
+        <div id="HUMMA-estadoBiblioteca" class="estadoBiblioteca">---</div>
+    </div>
+    
+    <div class="div2"> 
+        <div class="anterior"> <button id="HUMMA-prevWeek"><i class="fa fa-arrow-left" aria-hidden="true"></i></button></div>
+        <div id="HUMMA-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
+        <div class="siguiente"><button id="HUMMA-nextWeek"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+    </div>
+    
+    <div  class="semana">
+    <div class="dayContainer lunes"> 
+        <div id="HUMMA-dia0-nombre">lun</div>
+        <div id="HUMMA-dia0-apertura">8:00</div>
+        <div id="HUMMA-dia0-separador">-</div>
+        <div id="HUMMA-dia0-cierre">21:00</div>
+    </div>
+    <div class="dayContainer martes"> 
+        <div id="HUMMA-dia1-nombre">mar</div>
+        <div id="HUMMA-dia1-apertura">8:00</div>
+        <div id="HUMMA-dia1-separador">-</div>
+        <div id="HUMMA-dia1-cierre">21:00</div>
+    </div>
+    <div class="dayContainer miercoles"> 
+        <div id="HUMMA-dia2-nombre">mié</div>
+        <div id="HUMMA-dia2-apertura">8:00</div>
+        <div id="HUMMA-dia2-separador">-</div>
+        <div id="HUMMA-dia2-cierre">21:00</div>
+    </div>
+    <div class="dayContainer jueves"> 
+        <div id="HUMMA-dia3-nombre">jue</div>
+        <div id="HUMMA-dia3-apertura">8:00</div>
+        <div id="HUMMA-dia3-separador">-</div>
+        <div id="HUMMA-dia3-cierre">21:00</div>
+    </div>
+    <div class="dayContainer viernes"> 
+        <div id="HUMMA-dia4-nombre">vie</div>
+        <div id="HUMMA-dia4-apertura">8:00</div>
+        <div id="HUMMA-dia4-separador">-</div>
+        <div id="HUMMA-dia4-cierre">21:00</div>
+    </div>
+    <div class="dayContainer sabado"> 
+        <div id="HUMMA-dia5-nombre">sab</div>
+        <div id="HUMMA-dia5-apertura">-</div>
+        <div id="HUMMA-dia5-separador">Cerrado</div>
+        <div id="HUMMA-dia5-cierre">-</div>
+    </div>
+    <div class="dayContainer domingo"> 
+        <div id="HUMMA-dia6-nombre">dom</div>
+        <div id="HUMMA-dia6-apertura">-</div>
+        <div id="HUMMA-dia6-separador">Cerrado</div>
+        <div id="HUMMA-dia6-cierre">-</div>
+    </div>
+    </div>
+    </div> 
+
+
+<h2 id="campusOtras">Otras Bibliotecas</h2>
+
+<!-- Biblioteca de Bellas Artes  -->
+<div id="BA" class="horariobib par">
+    <div class="div1">     
+        <div class="biblioteca"> Biblioteca de Bellas Artes</div>
+        <div id="BA-estadoBiblioteca" class="estadoBiblioteca">---</div>
+    </div>
+    
+    <div class="div2"> 
+        <div class="anterior"> <button id="BA-prevWeek"><i class="fa fa-arrow-left" aria-hidden="true"></i></button></div>
+        <div id="BA-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
+        <div class="siguiente"><button id="BA-nextWeek"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+    </div>
+    
+    <div  class="semana">
+    <div class="dayContainer lunes"> 
+        <div id="BA-dia0-nombre">lun</div>
+        <div id="BA-dia0-apertura">8:00</div>
+        <div id="BA-dia0-separador">-</div>
+        <div id="BA-dia0-cierre">21:00</div>
+    </div>
+    <div class="dayContainer martes"> 
+        <div id="BA-dia1-nombre">mar</div>
+        <div id="BA-dia1-apertura">8:00</div>
+        <div id="BA-dia1-separador">-</div>
+        <div id="BA-dia1-cierre">21:00</div>
+    </div>
+    <div class="dayContainer miercoles"> 
+        <div id="BA-dia2-nombre">mié</div>
+        <div id="BA-dia2-apertura">8:00</div>
+        <div id="BA-dia2-separador">-</div>
+        <div id="BA-dia2-cierre">21:00</div>
+    </div>
+    <div class="dayContainer jueves"> 
+        <div id="BA-dia3-nombre">jue</div>
+        <div id="BA-dia3-apertura">8:00</div>
+        <div id="BA-dia3-separador">-</div>
+        <div id="BA-dia3-cierre">21:00</div>
+    </div>
+    <div class="dayContainer viernes"> 
+        <div id="BA-dia4-nombre">vie</div>
+        <div id="BA-dia4-apertura">8:00</div>
+        <div id="BA-dia4-separador">-</div>
+        <div id="BA-dia4-cierre">21:00</div>
+    </div>
+    <div class="dayContainer sabado"> 
+        <div id="BA-dia5-nombre">sab</div>
+        <div id="BA-dia5-apertura">-</div>
+        <div id="BA-dia5-separador">Cerrado</div>
+        <div id="BA-dia5-cierre">-</div>
+    </div>
+    <div class="dayContainer domingo"> 
+        <div id="BA-dia6-nombre">dom</div>
+        <div id="BA-dia6-apertura">-</div>
+        <div id="BA-dia6-separador">Cerrado</div>
+        <div id="BA-dia6-cierre">-</div>
+    </div>
+    </div>
+    </div> 
+
+<!-- Biblioteca de Agronómicas  -->
+<div id="AGR" class="horariobib impar">
+    <div class="div1">     
+        <div class="biblioteca"> Biblioteca de Ingeniería Agronómica</div>
+        <div id="AGR-estadoBiblioteca" class="estadoBiblioteca">---</div>
+    </div>
+    
+    <div class="div2"> 
+        <div class="anterior"> <button id="AGR-prevWeek"><i class="fa fa-arrow-left" aria-hidden="true"></i></button></div>
+        <div id="AGR-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
+        <div class="siguiente"><button id="AGR-nextWeek"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+    </div>
+    
+    <div  class="semana">
+    <div class="dayContainer lunes"> 
+        <div id="AGR-dia0-nombre">lun</div>
+        <div id="AGR-dia0-apertura">8:00</div>
+        <div id="AGR-dia0-separador">-</div>
+        <div id="AGR-dia0-cierre">21:00</div>
+    </div>
+    <div class="dayContainer martes"> 
+        <div id="AGR-dia1-nombre">mar</div>
+        <div id="AGR-dia1-apertura">8:00</div>
+        <div id="AGR-dia1-separador">-</div>
+        <div id="AGR-dia1-cierre">21:00</div>
+    </div>
+    <div class="dayContainer miercoles"> 
+        <div id="AGR-dia2-nombre">mié</div>
+        <div id="AGR-dia2-apertura">8:00</div>
+        <div id="AGR-dia2-separador">-</div>
+        <div id="AGR-dia2-cierre">21:00</div>
+    </div>
+    <div class="dayContainer jueves"> 
+        <div id="AGR-dia3-nombre">jue</div>
+        <div id="AGR-dia3-apertura">8:00</div>
+        <div id="AGR-dia3-separador">-</div>
+        <div id="AGR-dia3-cierre">21:00</div>
+    </div>
+    <div class="dayContainer viernes"> 
+        <div id="AGR-dia4-nombre">vie</div>
+        <div id="AGR-dia4-apertura">8:00</div>
+        <div id="AGR-dia4-separador">-</div>
+        <div id="AGR-dia4-cierre">21:00</div>
+    </div>
+    <div class="dayContainer sabado"> 
+        <div id="AGR-dia5-nombre">sab</div>
+        <div id="AGR-dia5-apertura">-</div>
+        <div id="AGR-dia5-separador">Cerrado</div>
+        <div id="AGR-dia5-cierre">-</div>
+    </div>
+    <div class="dayContainer domingo"> 
+        <div id="AGR-dia6-nombre">dom</div>
+        <div id="AGR-dia6-apertura">-</div>
+        <div id="AGR-dia6-separador">Cerrado</div>
+        <div id="AGR-dia6-cierre">-</div>
+    </div>
+    </div>
+    </div> 
+
+    <!-- Biblioteca de Politécnica  -->
+<div id="POL" class="horariobib par">
+    <div class="div1">     
+        <div class="biblioteca"> Biblioteca de Politécnica</div>
+        <div id="POL-estadoBiblioteca" class="estadoBiblioteca">---</div>
+    </div>
+    
+    <div class="div2"> 
+        <div class="anterior"> <button id="POL-prevWeek"><i class="fa fa-arrow-left" aria-hidden="true"></i></button></div>
+        <div id="POL-muestraSemana" class="eligeSemana"> Semana ??, del ??/?? al ??/??</div>
+        <div class="siguiente"><button id="POL-nextWeek"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+    </div>
+    
+    <div  class="semana">
+    <div class="dayContainer lunes"> 
+        <div id="POL-dia0-nombre">lun</div>
+        <div id="POL-dia0-apertura">8:00</div>
+        <div id="POL-dia0-separador">-</div>
+        <div id="POL-dia0-cierre">21:00</div>
+    </div>
+    <div class="dayContainer martes"> 
+        <div id="POL-dia1-nombre">mar</div>
+        <div id="POL-dia1-apertura">8:00</div>
+        <div id="POL-dia1-separador">-</div>
+        <div id="POL-dia1-cierre">21:00</div>
+    </div>
+    <div class="dayContainer miercoles"> 
+        <div id="POL-dia2-nombre">mié</div>
+        <div id="POL-dia2-apertura">8:00</div>
+        <div id="POL-dia2-separador">-</div>
+        <div id="POL-dia2-cierre">21:00</div>
+    </div>
+    <div class="dayContainer jueves"> 
+        <div id="POL-dia3-nombre">jue</div>
+        <div id="POL-dia3-apertura">8:00</div>
+        <div id="POL-dia3-separador">-</div>
+        <div id="POL-dia3-cierre">21:00</div>
+    </div>
+    <div class="dayContainer viernes"> 
+        <div id="POL-dia4-nombre">vie</div>
+        <div id="POL-dia4-apertura">8:00</div>
+        <div id="POL-dia4-separador">-</div>
+        <div id="POL-dia4-cierre">21:00</div>
+    </div>
+    <div class="dayContainer sabado"> 
+        <div id="POL-dia5-nombre">sab</div>
+        <div id="POL-dia5-apertura">-</div>
+        <div id="POL-dia5-separador">Cerrado</div>
+        <div id="POL-dia5-cierre">-</div>
+    </div>
+    <div class="dayContainer domingo"> 
+        <div id="POL-dia6-nombre">dom</div>
+        <div id="POL-dia6-apertura">-</div>
+        <div id="POL-dia6-separador">Cerrado</div>
+        <div id="POL-dia6-cierre">-</div>
+    </div>
+    </div>
+    </div> 
+    
+<script src="app7.js"></script>
+<script>
+    var jsonFile = "libraryAC7.json";
+</script>
+
+</body>
+</html>
