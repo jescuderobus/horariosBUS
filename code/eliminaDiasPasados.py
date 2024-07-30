@@ -1,7 +1,4 @@
 
-# pip install pandas
-# python3 eliminaDiasPasados.py 
-
 import json
 from datetime import datetime, timedelta
 
