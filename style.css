@@ -163,3 +163,7 @@ ol, ul{
 .ocupacion, .mensajeSala{
   padding: 0em 0em 1.2em 0em;
 }
+
+.ocupacion {
+ /* display: none;*/
+}
