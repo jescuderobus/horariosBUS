@@ -1,9 +1,12 @@
 # horariosBUS
 
-Aplicación de gestión de horarios basada en html, css y js
+Aplicación de gestión de horarios basada en html, css y js.
+La aplicación está publicada en https://bib.us.es/horarios
 
-- index0.html : tiene el aspecto deseado, a partir de aquí debemos añadir la funcionalidad JS
-- index1.html : definimos un estilo para los móviles
-- index2.html : ejemplo funcional con tres bibliotecas, necesitamos mejorar el js
-- 
+
+
+## TO-DO
+- El día 30 de Julio de 2024 hice una actulización con el codigo funcionando en el servidor.
+
+
 
