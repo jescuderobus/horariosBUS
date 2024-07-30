@@ -7,6 +7,6 @@ La aplicación está publicada en https://bib.us.es/horarios
 
 ## TO-DO
 - El día 30 de Julio de 2024 hice una actulización con el codigo funcionando en el servidor.
-
+- El fichero "ejemplo_excepcionesHorarios.json" se deja como fichero de ejemplo del formato para indicar horarios.
 
 

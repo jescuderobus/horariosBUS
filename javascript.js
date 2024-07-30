@@ -61,6 +61,8 @@ var currentWeekOffset = 0;
 function showWeek(data, weekOffset) {
   currentWeekOffset += weekOffset;
 
+
+
   // Obtiene la fecha del lunes y domingo de la semana correspondiente
   var now = new Date();
   now.setDate(now.getDate() + 7 * currentWeekOffset);
@@ -104,6 +106,21 @@ var fechaLunes = formatDateDay(monday);
     var escribeAbrimos = document.getElementById(library+'-dia'+i+'-apertura');
     var escribeSeparador = document.getElementById(library+'-dia'+i+'-separador');
     var escribeCerramos = document.getElementById(library+'-dia'+i+'-cierre');
+
+      // No se ve la semana pasada ni mas de 8 semanas en el futuro
+      if (currentWeekOffset <=8 || currentWeekOffset >=0) {
+        document.getElementById(library+'-prevWeek').style.display = 'block';
+        document.getElementById(library+'-nextWeek').style.display = 'block';
+      }
+      if (currentWeekOffset >=8) {
+        currentWeekOffset=8;
+        document.getElementById(library+'-nextWeek').style.display = 'none';
+      }
+      if (currentWeekOffset <=0) {
+        
+        currentWeekOffset=0;
+        document.getElementById(library+'-prevWeek').style.display = 'none';
+      }
 
     // Primero, elimina las clases "current-day" y "closed-day" si ya existen
     if (escribeFecha) {
@@ -186,12 +203,36 @@ var fechaLunes = formatDateDay(monday);
       }
     }
 
+    
+    if (currentWeekOffset == 0) {
+      // Añadir el marco amarillo al día actual
+      var currentDays = document.querySelectorAll('.current-day');
+      currentDays.forEach(function(day) {
+          if (!day.classList.contains('ignore-class')) {
+              day.parentElement.classList.add('parent-of-current-day');
+          }
+      });
+  } else {
+      // Eliminar el marco amarillo de las semanas pasadas y futuras
+      var currentDays = document.querySelectorAll('.current-day');
+      currentDays.forEach(function(day) {
+          if (!day.classList.contains('ignore-class')) {
+              day.parentElement.classList.remove('parent-of-current-day');
+          }
+      });
+  }
+
     } // FIN DEL FOR
+
+
+  
 
     var muestraSemana = document.getElementById(library+'-muestraSemana');
     if (muestraSemana) {
       muestraSemana.innerText = schedule;
     }
+
+
 
 
   }
