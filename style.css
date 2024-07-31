@@ -171,6 +171,7 @@ ol, ul{
   font-weight: 600;
   border-radius: 0.8em; 
   opacity: 0.5;
+  white-space: nowrap;
 }
 
 /*
@@ -184,6 +185,7 @@ ol, ul{
   font-weight: 600;
   border-radius: 0.8em; 
   opacity: 0.7;
+  white-space: nowrap;
 }
 
 /*
@@ -197,10 +199,26 @@ ol, ul{
   font-weight: 600;
   border-radius: 0.8em; 
   opacity: 0.8;
+  white-space: nowrap;
 }
 
 /*
 <span class='oAlta' title='más del 66%'>A L T A</span>
+*/
+
+.oMAlta {
+  background-color: red;
+  color: white;
+  padding: 0.2em 1em; 
+  font-weight: 700;
+  border-radius: 0.8em; 
+  opacity: 0.9;
+  border: 1px solid black;
+  white-space: nowrap;
+}
+
+/*
+<span class='oMAlta' title='más del 90%'>M U Y  ALTA</span>
 */
 
 .big-text-1 {
