@@ -203,6 +203,19 @@ var fechaLunes = formatDateDay(monday);
       }
     }
 
+
+//---------------------------------------------
+    if (currentWeekOffset > 0) {
+      // ponemos ocupacion a un valor fijo
+      var escribeOcupacion = document.getElementsByClassName('ocupacion');
+      for (var j = 0; j < escribeOcupacion.length; j++) {
+        escribeOcupacion[j].innerText = "ocupacion ---";
+      }
+    } else{
+      // recarga la pagina una vez
+    }
+
+//---------------------------------------------
     
     if (currentWeekOffset == 0) {
       // Añadir el marco amarillo al día actual
