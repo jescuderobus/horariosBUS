@@ -11,7 +11,7 @@ La aplicación está publicada en https://bib.us.es/horarios
 - Se han cambiado los colores de azul a rojo.
 - Se han añadido los apartados para indicar los puestos y la ocupación de la biblioteca.
 - No se muestran flechas para ver las semanas pasadas ni las futuras de más de dos meses.
-- Se indica el dia de hoy añadiendole un marco amarillos.
+- Se indica el dia de hoy añadiendole un marco amarillo.
 - Se escribe una entradilla que explica el porqué de los horarios y sus excepciones.
 
 

@@ -1,0 +1,16 @@
+# Agregado por JEI control acceso
+<IfModule authz_core_module>
+    <RequireAny>
+
+                # Acceso para DeBiblio
+                Require ip 52.18.63.169/32
+
+                # Acceso nueva red bibliotecas
+                Require ip 172.31.0.0/16
+
+                # Acceso para DIGI
+                Require ip 79.116.91.0/24
+
+    </RequireAny>
+
+</IfModule>
