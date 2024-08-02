@@ -1,0 +1,76 @@
+.capacidad, .ocupacion, .mensajeSala{
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    padding: 0em 0em 0.4em 0em;
+  }
+  
+  .ocupacion, .mensajeSala{
+    padding: 0em 0em 1.2em 0em;
+  }
+  
+  .oBaja {
+    background-color: green;
+    color: white;
+    padding: 0.2em 1em; 
+    font-weight: 600;
+    border-radius: 0.8em; 
+    opacity: 0.5;
+    white-space: nowrap;
+  }
+  
+  /*
+  <span class='oBaja' title='menos del 33%'>B A J A</span>
+  */
+  
+  .oMedia {
+    background-color: orange;
+    color: white;
+    padding: 0.2em 1em; 
+    font-weight: 600;
+    border-radius: 0.8em; 
+    opacity: 0.7;
+    white-space: nowrap;
+  }
+  
+  /*
+  <span class='oMedia' title='entre 33% y 66%'>M E D I A</span>
+  */
+  
+  .oAlta {
+    background-color: red;
+    color: white;
+    padding: 0.2em 1em; 
+    font-weight: 600;
+    border-radius: 0.8em; 
+    opacity: 0.8;
+    white-space: nowrap;
+  }
+  
+  /*
+  <span class='oAlta' title='más del 66%'>A L T A</span>
+  */
+  
+  .oMAlta {
+    background-color: red;
+    color: white;
+    padding: 0.2em 1em; 
+    font-weight: 700;
+    border-radius: 0.8em; 
+    opacity: 0.9;
+    border: 1px solid black;
+    white-space: nowrap;
+  }
+  
+  /*
+  <span class='oMAlta' title='más del 90%'>M U Y  ALTA</span>
+  */
+
+
+  /*
+0, "ocupación ---"
+1, "<span class='oBaja' title='menos del 33%'>B A J A</span>"
+2, "<span class='oMedia' title='entre 33% y 66%'>M E D I A</span>"
+3, "<span class='oAlta' title='más del 66%'>A L T A</span>"
+4, "<span class='oMAlta' title='más del 90%'>M U Y  ALTA</span>"
+  */
