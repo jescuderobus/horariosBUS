@@ -121,7 +121,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <!-- Modal -->
     <div id="myModal" class="modal">
-    
+
         <div class="modal-content">
             <span class="close">&times;</span>
             <span class="logo">
@@ -132,11 +132,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </span>
             <p class="text-inside-modal-centrado">
                 La última ocupación reportada fue hace más de una hora.</p>
-            <p class="text-inside-modal-centrado">    <img src="images/time-stopwatch-watch-svgrepo-com.svg" width="20%" alt="reloj decorativo"></p>
-
-
-                
-
+            <p class="text-inside-modal-centrado">
+                <img src="images/time-stopwatch-watch-svgrepo-com.svg" width="20%" alt="reloj decorativo">
+            </p>
         </div>
     </div>
 
