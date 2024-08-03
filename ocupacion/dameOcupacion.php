@@ -27,7 +27,7 @@ $data = [
 ];
 
 // Accedemos a la base de datos SQLite
-$db = new SQLite3('2024Ocupacion.sqlite');
+$db = new SQLite3('ocupacion.sqlite');
 
 // Realizamos una consulta a la base de datos para obtener los valores biblioteca-ocupación
 // y actualizarlos en el objeto $data

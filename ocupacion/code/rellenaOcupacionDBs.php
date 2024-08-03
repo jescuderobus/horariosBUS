@@ -1,9 +1,23 @@
 <?php
+
 // Crear o abrir una base de datos SQLite
-$db = new SQLite3('2024Ocupacion.sqlite');
+$db1 = new SQLite3('ocupacion.sqlite');
 
 // Crear una tabla llamada 'reportes' si no existe
-$db->exec('
+$db1->exec('
+    CREATE TABLE IF NOT EXISTS reportes (
+        biblioteca TEXT NOT NULL,
+        ocupacion INTEGER NOT NULL,
+        timestamp INTEGER NOT NULL
+    )
+');
+
+
+// Crear o abrir una base de datos SQLite
+$db2 = new SQLite3('ocupacionTodo2024.sqlite');
+
+// Crear una tabla llamada 'reportes' si no existe
+$db2->exec('
     CREATE TABLE IF NOT EXISTS reportes (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         ip TEXT NOT NULL,
@@ -47,19 +61,28 @@ for ($i = 0; $i < 5; $i++) {
     $timestamp = time();
     $hora_humana = date('Y-m-d H:i:s', $timestamp);
 
-    $stmt = $db->prepare('
+    $stmt1 = $db1->prepare('
+         UPDATE reportes SET ocupacion = :ocupacion, timestamp = :timestamp WHERE biblioteca = :biblioteca
+    ');
+    $stmt1->bindValue(':biblioteca', $biblioteca, SQLITE3_TEXT);
+    $stmt1->bindValue(':ocupacion', $ocupacion, SQLITE3_INTEGER);
+    $stmt1->bindValue(':timestamp', $timestamp, SQLITE3_INTEGER);
+    $stmt1->execute();
+
+    $stmt2 = $db2->prepare('
         INSERT INTO reportes (ip, uvus, biblioteca, ocupacion, timestamp, hora_humana)
         VALUES (:ip, :uvus, :biblioteca, :ocupacion, :timestamp, :hora_humana)
     ');
-    $stmt->bindValue(':ip', $ip, SQLITE3_TEXT);
-    $stmt->bindValue(':uvus', $uvus, SQLITE3_TEXT);
-    $stmt->bindValue(':biblioteca', $biblioteca, SQLITE3_TEXT);
-    $stmt->bindValue(':ocupacion', $ocupacion, SQLITE3_INTEGER);
-    $stmt->bindValue(':timestamp', $timestamp, SQLITE3_INTEGER);
-    $stmt->bindValue(':hora_humana', $hora_humana, SQLITE3_TEXT);
-    $stmt->execute();
+    $stmt2->bindValue(':ip', $ip, SQLITE3_TEXT);
+    $stmt2->bindValue(':uvus', $uvus, SQLITE3_TEXT);
+    $stmt2->bindValue(':biblioteca', $biblioteca, SQLITE3_TEXT);
+    $stmt2->bindValue(':ocupacion', $ocupacion, SQLITE3_INTEGER);
+    $stmt2->bindValue(':timestamp', $timestamp, SQLITE3_INTEGER);
+    $stmt2->bindValue(':hora_humana', $hora_humana, SQLITE3_TEXT);
+    $stmt2->execute();
 }
 
 // Cerrar la conexión a la base de datos
-$db->close();
+$db1->close();
+$db2->close();
 ?>

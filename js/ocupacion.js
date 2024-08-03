@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // Fetch the JSON data from the PHP endpoint
-    fetch('ocupacion/dameOcupacionDemo.php')
+    fetch('ocupacion/dameOcupacion.php')
         .then(response => response.json())
         .then(data => {
             // Iterate over the keys in the JSON object
