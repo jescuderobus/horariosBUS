@@ -2,7 +2,15 @@
 
 Todas las notas importantes sobre los cambios en este proyecto se documentarán en este archivo.
 
-## [Unreleased]
+## [Unleadsed]
+### Added
+- Enviar notificaciones push
+How to setup Web Notification PHP + Minishlink + Javascript
+
+
+
+
+## [1.1.1] - 2024-08-05
 ### Added
 - Nueva funcionalidad para gestionar los usuarios y sus reportes de ocupación.
 - Scripts de personalización en Post-Instalación

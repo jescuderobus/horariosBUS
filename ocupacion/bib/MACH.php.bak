@@ -81,7 +81,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/ocupacion.css">
     <link rel="stylesheet" href="../css/modal.css">
-    <script src="../js/registroSW.js"></script>
 </head>
 
 <body>
