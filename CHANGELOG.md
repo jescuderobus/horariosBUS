@@ -5,8 +5,9 @@ Todas las notas importantes sobre los cambios en este proyecto se documentarán 
 ## [Unreleased]
 ### Added
 - Nueva funcionalidad para gestionar los usuarios y sus reportes de ocupación.
-- Scripts de personalizacion en Post-Instalación
+- Scripts de personalización en Post-Instalación
 - archivos .htaccess para gestionar flujo y seguridad de la aplicación.
+- generador de bibliotecas a partir de Machado
 
 ## Changed
 - Cambiado a font-awesome 6.6.0

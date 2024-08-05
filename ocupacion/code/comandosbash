@@ -1,0 +1,43 @@
+# Crear las paginas de las bibliotecas de reporte a partir de MACHADO
+#  ["MACH","ING", "COMB","CRAI","MAT","ARQ","INF","EDU","DYCT","ECO","TYF","PYF","CS","HUMSC","HUMSA","HUMSB","HUMMA","BA","AGR","POL"]
+
+#sed 's/MACH/ING/g' MACH.php > ING.php
+#sed -i 's/Biblioteca\ Rector\ Machado\ y\ Núñez/Biblioteca de Ingeniería/g' ING.php
+sed 's/MACH/COMB/g' MACH.php > COMB.php
+sed -i 's/Biblioteca\ Rector\ Machado\ y\ Núñez/Biblioteca de Comunicación/g' COMB.php
+#sed 's/MACH/CRAI/g' MACH.php > CRAI.php
+#sed -i 's/Biblioteca\ Rector\ Machado\ y\ Núñez/CRAI Antonio de Ulloa/g' CRAI.php
+sed 's/MACH/MAT/g' MACH.php > MAT.php
+sed -i 's/Biblioteca\ Rector\ Machado\ y\ Núñez/Biblioteca de Matemáticas/g' MAT.php
+sed 's/MACH/ARQ/g' MACH.php > ARQ.php
+sed -i 's/Biblioteca\ Rector\ Machado\ y\ Núñez/Biblioteca de Arquitectura y Edificación/g' ARQ.php
+sed 's/MACH/INF/g' MACH.php > INF.php
+sed -i 's/Biblioteca\ Rector\ Machado\ y\ Núñez/Biblioteca de Informática/g' INF.php
+sed 's/MACH/EDU/g' MACH.php > EDU.php
+sed -i 's/Biblioteca\ Rector\ Machado\ y\ Núñez/Biblioteca de Educación/g' EDU.php
+sed 's/MACH/DYCT/g' MACH.php > DYCT.php
+sed -i 's/Biblioteca\ Rector\ Machado\ y\ Núñez/Biblioteca de Derecho y Ciencias del Trabajo/g' DYCT.php
+sed 's/MACH/ECO/g' MACH.php > ECO.php
+sed -i 's/Biblioteca\ Rector\ Machado\ y\ Núñez/Biblioteca de Economía/g' ECO.php
+sed 's/MACH/TYF/g' MACH.php > TYF.php
+sed -i 's/Biblioteca\ Rector\ Machado\ y\ Núñez/Biblioteca de Turismo y Finanzas/g' TYF.php
+sed 's/MACH/PYF/g' MACH.php > PYF.php
+sed -i 's/Biblioteca\ Rector\ Machado\ y\ Núñez/Biblioteca de Psicología y Filosofía/g' PYF.php
+# sed 's/MACH/CS/g' MACH.php > CS.php
+# sed -i 's/Biblioteca\ Rector\ Machado\ y\ Núñez/Biblioteca de Centros de la Salud/g' CS.php
+sed 's/MACH/HUMSC/g' MACH.php > HUMSC.php
+sed -i 's/Biblioteca\ Rector\ Machado\ y\ Núñez/Biblioteca de Humanidades (Sala Central)/g' HUMSC.php
+sed 's/MACH/HUMSA/g' MACH.php > HUMSA.php
+sed -i 's/Biblioteca\ Rector\ Machado\ y\ Núñez/Biblioteca de Humanidades (Sala de Arte)/g' HUMSA.php
+sed 's/MACH/HUMSB/g' MACH.php > HUMSB.php
+sed -i 's/Biblioteca\ Rector\ Machado\ y\ Núñez/Biblioteca de Humanidades (Sala Bécquer)/g' HUMSB.php
+sed 's/MACH/HUMMA/g' MACH.php > HUMMA.php
+sed -i 's/Biblioteca\ Rector\ Machado\ y\ Núñez/Biblioteca de Humanidades (Sala Manuales)/g' HUMMA.php
+sed 's/MACH/BA/g' MACH.php > BA.php
+sed -i 's/Biblioteca\ Rector\ Machado\ y\ Núñez/Biblioteca de Bellas Artes/g' BA.php
+sed 's/MACH/AGR/g' MACH.php > AGR.php
+sed -i 's/Biblioteca\ Rector\ Machado\ y\ Núñez/Biblioteca de Agronomía/g' AGR.php
+sed 's/MACH/POL/g' MACH.php > POL.php
+sed -i 's/Biblioteca\ Rector\ Machado\ y\ Núñez/Biblioteca de Ciencias Políticas/g' POL.php
+
+
