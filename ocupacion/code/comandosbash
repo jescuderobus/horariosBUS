@@ -1,3 +1,9 @@
+
+# Para que todo funcione correctamente, es necesario que el usuario apache tenga permisos de escritura en el directorio ocupacion/ y en todos sus subdirectorios
+chown -R apache: ocupacion/
+chmod -R 775 ocupacion/*.sqlite
+
+
 # Crear las paginas de las bibliotecas de reporte a partir de MACHADO
 #  ["MACH","ING", "COMB","CRAI","MAT","ARQ","INF","EDU","DYCT","ECO","TYF","PYF","CS","HUMSC","HUMSA","HUMSB","HUMMA","BA","AGR","POL"]
 
