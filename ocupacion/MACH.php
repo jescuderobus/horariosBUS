@@ -6,23 +6,50 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $ocupacion = $_POST['ocupacion'];
     $timestamp = time();
+    $biblioteca = "MACH";
 
-    $db1 = new SQLite3('ocupacion.sqlite');
-    $stmt1 = $db1->prepare('UPDATE reportes SET ocupacion = :ocupacion, timestamp = :timestamp WHERE biblioteca = "MACH"');
-    $stmt1->bindValue(':ocupacion', $ocupacion, SQLITE3_INTEGER);
-    $stmt1->bindValue(':timestamp', $timestamp, SQLITE3_INTEGER);
-    $stmt1->execute();
-    $db1->close();
+    try {
+        $db1 = new SQLite3('ocupacion.sqlite');
+        $stmt1 = $db1->prepare('UPDATE reportes SET ocupacion = :ocupacion, timestamp = :timestamp WHERE biblioteca = :bilbioteca);
+        if (!$stmt1) {
+            throw new Exception($db1->lastErrorMsg());
+        }
+        $stmt1->bindValue(':ocupacion', $ocupacion, SQLITE3_INTEGER);
+        $stmt1->bindValue(':timestamp', $timestamp, SQLITE3_INTEGER);
+        $stmt1->bindValue(':biblioteca', $biblioteca, SQLITE3_TEXT);
+        $result = $stmt1->execute();
+        if (!$result) {
+            throw new Exception($stmt1->getSQL());
+        }
+        $db1->close();
+        echo "Update successful.";
+    } catch (Exception $e) {
+        echo "Error: " . $e->getMessage();
+    }
 
+
+
+try {
     $db2 = new SQLite3('ocupacionTodo2024.sqlite');
-    $stmt2 = $db2->prepare('INSERT INTO reportes (ip, uvus, biblioteca, ocupacion, timestamp, hora_humana) VALUES (:ip, :uvus, "MACH", :ocupacion, :timestamp, :hora_humana)');
+    $stmt2 = $db2->prepare('INSERT INTO reportes (ip, uvus, biblioteca, ocupacion, timestamp, hora_humana) VALUES (:ip, :uvus, :biblioteca, :ocupacion, :timestamp, :hora_humana)');
+    if (!$stmt2) {
+        throw new Exception($db2->lastErrorMsg());
+    }
     $stmt2->bindValue(':ip', $_POST['ip'], SQLITE3_TEXT);
     $stmt2->bindValue(':uvus', $_POST['uvus'], SQLITE3_TEXT);
+    $stmt1->bindValue(':biblioteca', $biblioteca, SQLITE3_TEXT);
     $stmt2->bindValue(':ocupacion', $ocupacion, SQLITE3_INTEGER);
     $stmt2->bindValue(':timestamp', $timestamp, SQLITE3_INTEGER);
     $stmt2->bindValue(':hora_humana', $_POST['hora_humana'], SQLITE3_TEXT);
-    $stmt2->execute();
+    $result = $stmt2->execute();
+    if (!$result) {
+        throw new Exception($stmt2->getSQL());
+    }
     $db2->close();
+    echo "Insert successful.";
+} catch (Exception $e) {
+    echo "Error: " . $e->getMessage();
+}
 
     /*
     echo json_encode(['status' => 'success']);
