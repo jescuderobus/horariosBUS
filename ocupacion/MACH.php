@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     try {
         $db1 = new SQLite3('ocupacion.sqlite');
-        $stmt1 = $db1->prepare('UPDATE reportes SET ocupacion = :ocupacion, timestamp = :timestamp WHERE biblioteca = :bilbioteca);
+        $stmt1 = $db1->prepare('UPDATE reportes SET ocupacion = :ocupacion, timestamp = :timestamp WHERE biblioteca = :biblioteca ');
         if (!$stmt1) {
             throw new Exception($db1->lastErrorMsg());
         }
@@ -51,7 +51,7 @@ try {
     echo "Error: " . $e->getMessage();
 }
 
-    /*
+    
     echo json_encode(['status' => 'success']);
     exit;
     */
