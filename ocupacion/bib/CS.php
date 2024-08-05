@@ -7,15 +7,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $ocupacion = $_POST['ocupacion'];
     $timestamp = time();
 
-    $db1 = new SQLite3('ocupacion.sqlite');
-    $stmt1 = $db1->prepare('UPDATE reportes SET ocupacion = :ocupacion, timestamp = :timestamp WHERE biblioteca = "ING"');
+    $db1 = new SQLite3('../ocupacion.sqlite');
+    $stmt1 = $db1->prepare('UPDATE reportes SET ocupacion = :ocupacion, timestamp = :timestamp WHERE biblioteca = "CS"');
     $stmt1->bindValue(':ocupacion', $ocupacion, SQLITE3_INTEGER);
     $stmt1->bindValue(':timestamp', $timestamp, SQLITE3_INTEGER);
     $stmt1->execute();
     $db1->close();
 
-    $db2 = new SQLite3('ocupacionTodo2024.sqlite');
-    $stmt2 = $db2->prepare('INSERT INTO reportes (ip, uvus, biblioteca, ocupacion, timestamp, hora_humana) VALUES (:ip, :uvus, "ING", :ocupacion, :timestamp, :hora_humana)');
+    $db2 = new SQLite3('../ocupacionTodo2024.sqlite');
+    $stmt2 = $db2->prepare('INSERT INTO reportes (ip, uvus, biblioteca, ocupacion, timestamp, hora_humana) VALUES (:ip, :uvus, "CS", :ocupacion, :timestamp, :hora_humana)');
     $stmt2->bindValue(':ip', $_POST['ip'], SQLITE3_TEXT);
     $stmt2->bindValue(':uvus', $_POST['uvus'], SQLITE3_TEXT);
     $stmt2->bindValue(':ocupacion', $ocupacion, SQLITE3_INTEGER);
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $_POST = [];
 
     // Recargamos la página para que se actualice la información
-    header('Location: ING.php');
+    header('Location: CS.php');
 }
 ?>
 
@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta http-equiv="refresh" content="60">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reporte de ocupación Biblioteca de Ingenieros</title>
+    <title>Reporte de ocupación Biblioteca Centros de la Salud</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/ocupacion.css">
     <link rel="stylesheet" href="css/modal.css">
@@ -57,9 +57,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h1>Reporte de ocupación BUS</h1>
     <hr style="color: black;width: 80%;">
     <p>Hoy <span id="dia-hora"></span> deseo reportar la ocupación de la</p>
-    <div style="font-size: 4em;">Biblioteca de Ingenieros</div>
+    <div style="font-size: 4em;">Biblioteca Centros de la Salud</div>
     <form method="POST" action="">
-        <input type="hidden" name="biblioteca" value="ING">
+        <input type="hidden" name="biblioteca" value="CS">
         <input type="hidden" name="timestamp" value="<?php echo time(); ?>">
         <input type="hidden" name="hora_humana" value="<?php echo date('Y-m-d H:i:s', time()); ?>">
         <input type="hidden" name="ip" value="<?php echo $_SERVER['REMOTE_ADDR']; ?>">
@@ -98,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Ejecutamos una sentencia SQL para obtener la última ocupación reportada
 
     $db = new SQLite3('ocupacion.sqlite');
-    $result = $db->query('SELECT ocupacion, timestamp FROM reportes WHERE biblioteca = "ING"');
+    $result = $db->query('SELECT ocupacion, timestamp FROM reportes WHERE biblioteca = "CS"');
     while ($row = $result->fetchArray()) {
         $lastOcupacion = $ocupacionTag[$row['ocupacion']];
         $lastFecha = date('Y-m-d H:i:s', $row['timestamp']);

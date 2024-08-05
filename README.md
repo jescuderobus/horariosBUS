@@ -17,4 +17,4 @@ Es una subaplicación para editar el fichero de excepciones.
 
 
 ## ocupacion
-Es una subaplicación para controlar los tags indicadores de ocupación.
+Es una subaplicación para controlar los tags indicadores de ocupación de las bibliotecas.

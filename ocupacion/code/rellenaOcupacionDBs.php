@@ -1,7 +1,7 @@
 <?php
 
 // Crear o abrir una base de datos SQLite
-$db1 = new SQLite3('ocupacion.sqlite');
+$db1 = new SQLite3('../ocupacion.sqlite');
 
 // Crear una tabla llamada 'reportes' si no existe
 $db1->exec('
@@ -14,7 +14,7 @@ $db1->exec('
 
 
 // Crear o abrir una base de datos SQLite
-$db2 = new SQLite3('ocupacionTodo2024.sqlite');
+$db2 = new SQLite3('../ocupacionTodo2024.sqlite');
 
 // Crear una tabla llamada 'reportes' si no existe
 $db2->exec('

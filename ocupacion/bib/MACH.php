@@ -3,26 +3,56 @@
 // Manejamos el objeto POST
 // print_r($_POST);
 
+// Configurar la zona horaria a la del servidor
+date_default_timezone_set('Europe/Madrid');
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $ocupacion = $_POST['ocupacion'];
     $timestamp = time();
+    $biblioteca = "MACH";
 
-    $db1 = new SQLite3('ocupacion.sqlite');
-    $stmt1 = $db1->prepare('UPDATE reportes SET ocupacion = :ocupacion, timestamp = :timestamp WHERE biblioteca = "CRAI"');
-    $stmt1->bindValue(':ocupacion', $ocupacion, SQLITE3_INTEGER);
-    $stmt1->bindValue(':timestamp', $timestamp, SQLITE3_INTEGER);
-    $stmt1->execute();
-    $db1->close();
+    try {
+        $db1 = new SQLite3('ocupacion.sqlite');
+        $stmt1 = $db1->prepare('UPDATE reportes SET ocupacion = :ocupacion, timestamp = :timestamp WHERE biblioteca = :biblioteca ');
+        if (!$stmt1) {
+            throw new Exception($db1->lastErrorMsg());
+        }
+        $stmt1->bindValue(':ocupacion', $ocupacion, SQLITE3_INTEGER);
+        $stmt1->bindValue(':timestamp', $timestamp, SQLITE3_INTEGER);
+        $stmt1->bindValue(':biblioteca', $biblioteca, SQLITE3_TEXT);
+        $result = $stmt1->execute();
+        if (!$result) {
+            throw new Exception($stmt1->getSQL());
+        }
+        $db1->close();
+        echo "Update successful.";
+    } catch (Exception $e) {
+        echo "Error: " . $e->getMessage();
+    }
 
+
+
+try {
     $db2 = new SQLite3('ocupacionTodo2024.sqlite');
-    $stmt2 = $db2->prepare('INSERT INTO reportes (ip, uvus, biblioteca, ocupacion, timestamp, hora_humana) VALUES (:ip, :uvus, "CRAI", :ocupacion, :timestamp, :hora_humana)');
+    $stmt2 = $db2->prepare('INSERT INTO reportes (ip, uvus, biblioteca, ocupacion, timestamp, hora_humana) VALUES (:ip, :uvus, :biblioteca, :ocupacion, :timestamp, :hora_humana)');
+    if (!$stmt2) {
+        throw new Exception($db2->lastErrorMsg());
+    }
     $stmt2->bindValue(':ip', $_POST['ip'], SQLITE3_TEXT);
     $stmt2->bindValue(':uvus', $_POST['uvus'], SQLITE3_TEXT);
+    $stmt1->bindValue(':biblioteca', $biblioteca, SQLITE3_TEXT);
     $stmt2->bindValue(':ocupacion', $ocupacion, SQLITE3_INTEGER);
     $stmt2->bindValue(':timestamp', $timestamp, SQLITE3_INTEGER);
     $stmt2->bindValue(':hora_humana', $_POST['hora_humana'], SQLITE3_TEXT);
-    $stmt2->execute();
+    $result = $stmt2->execute();
+    if (!$result) {
+        throw new Exception($stmt2->getSQL());
+    }
     $db2->close();
+    echo "Insert successful.";
+} catch (Exception $e) {
+    echo "Error: " . $e->getMessage();
+}
 
     /*
     echo json_encode(['status' => 'success']);
@@ -33,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $_POST = [];
 
     // Recargamos la página para que se actualice la información
-    header('Location: CRAI.php');
+    header('Location: MACH.php');
 }
 ?>
 
@@ -47,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta http-equiv="refresh" content="60">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reporte de ocupación CRAI Antonio de Ulloa</title>
+    <title>Reporte de ocupación Biblioteca Rector Machado y Núñez</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/ocupacion.css">
     <link rel="stylesheet" href="css/modal.css">
@@ -57,9 +87,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h1>Reporte de ocupación BUS</h1>
     <hr style="color: black;width: 80%;">
     <p>Hoy <span id="dia-hora"></span> deseo reportar la ocupación de la</p>
-    <div style="font-size: 4em;">CRAI Antonio de Ulloa</div>
+    <div style="font-size: 4em;">Biblioteca Rector Machado y Núñez</div>
     <form method="POST" action="">
-        <input type="hidden" name="biblioteca" value="CRAI">
+        <input type="hidden" name="biblioteca" value="MACH">
         <input type="hidden" name="timestamp" value="<?php echo time(); ?>">
         <input type="hidden" name="hora_humana" value="<?php echo date('Y-m-d H:i:s', time()); ?>">
         <input type="hidden" name="ip" value="<?php echo $_SERVER['REMOTE_ADDR']; ?>">
@@ -98,7 +128,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Ejecutamos una sentencia SQL para obtener la última ocupación reportada
 
     $db = new SQLite3('ocupacion.sqlite');
-    $result = $db->query('SELECT ocupacion, timestamp FROM reportes WHERE biblioteca = "CRAI"');
+    $result = $db->query('SELECT ocupacion, timestamp FROM reportes WHERE biblioteca = "MACH"');
     while ($row = $result->fetchArray()) {
         $lastOcupacion = $ocupacionTag[$row['ocupacion']];
         $lastFecha = date('Y-m-d H:i:s', $row['timestamp']);

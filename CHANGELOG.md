@@ -8,10 +8,16 @@ Todas las notas importantes sobre los cambios en este proyecto se documentarán 
 - Scripts de personalizacion en Post-Instalación
 - archivos .htaccess para gestionar flujo y seguridad de la aplicación.
 
+## Changed
+- Cambiado a font-awesome 6.6.0
+- Añadido icono SVG de máquina de vending y de salas de trabajo en grupo
+
+
+
 
 ## [1.1.0] - 2024-08-03
 ### Added
-- Nueva funcionalidad para gestionar los reportes do ocupación.
+- Nueva funcionalidad para gestionar los reportes de ocupación.
 - Api REST que indica la ocupación de cada bibioteca.
 - Páginas de demostración de como gestionar los reportes de ocupación.
 
