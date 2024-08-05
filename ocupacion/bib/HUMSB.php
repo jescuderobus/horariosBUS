@@ -9,7 +9,7 @@ date_default_timezone_set('Europe/Madrid');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $ocupacion = $_POST['ocupacion'];
     $timestamp = time();
-    $biblioteca = "MACH";
+    $biblioteca = "HUMSB";
 
     try {
         $db1 = new SQLite3('../ocupacion.sqlite');
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $_POST = [];
 
     // Recargamos la página para que se actualice la información
-    header('Location: MACH.php');
+    header('Location: HUMSB.php');
 }
 ?>
 
@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta http-equiv="refresh" content="60">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reporte de ocupación Biblioteca Rector Machado y Núñez</title>
+    <title>Reporte de ocupación Biblioteca de Humanidades (Sala Bécquer)</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/ocupacion.css">
     <link rel="stylesheet" href="../css/modal.css">
@@ -87,9 +87,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h1>Reporte de ocupación BUS</h1>
     <hr style="color: black;width: 80%;">
     <p>Hoy <span id="dia-hora"></span> deseo reportar la ocupación de la</p>
-    <div style="font-size: 4em;">Biblioteca Rector Machado y Núñez</div>
+    <div style="font-size: 4em;">Biblioteca de Humanidades (Sala Bécquer)</div>
     <form method="POST" action="">
-        <input type="hidden" name="biblioteca" value="MACH">
+        <input type="hidden" name="biblioteca" value="HUMSB">
         <input type="hidden" name="timestamp" value="<?php echo time(); ?>">
         <input type="hidden" name="hora_humana" value="<?php echo date('Y-m-d H:i:s', time()); ?>">
         <input type="hidden" name="ip" value="<?php echo $_SERVER['REMOTE_ADDR']; ?>">
@@ -128,7 +128,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Ejecutamos una sentencia SQL para obtener la última ocupación reportada
 
     $db = new SQLite3('../ocupacion.sqlite');
-    $result = $db->query('SELECT ocupacion, timestamp FROM reportes WHERE biblioteca = "MACH"');
+    $result = $db->query('SELECT ocupacion, timestamp FROM reportes WHERE biblioteca = "HUMSB"');
     while ($row = $result->fetchArray()) {
         $lastOcupacion = $ocupacionTag[$row['ocupacion']];
         $lastFecha = date('Y-m-d H:i:s', $row['timestamp']);
