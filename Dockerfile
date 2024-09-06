@@ -18,6 +18,3 @@ COPY . /var/www/html/
 
 # Establecer el directorio de trabajo
 WORKDIR /var/www/html/
-
-# Exponer el puerto 80
-EXPOSE 80
