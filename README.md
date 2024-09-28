@@ -18,3 +18,6 @@ Es una subaplicación para editar el fichero de excepciones.
 
 ## ocupacion
 Es una subaplicación para controlar los tags indicadores de ocupación de las bibliotecas.
+Esta subaplicación se basa en escribir en una base de datos sqlite las ocupaciones visualizadas por los técnicos de bibliotecas en sala.
+
+
